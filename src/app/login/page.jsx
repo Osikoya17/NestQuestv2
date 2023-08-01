@@ -7,7 +7,7 @@ export default function login() {
     // Main Body
     <main className="flex items-center justify-center p-10 lg:pt-10 flex-col">
         {/* LOGO */}
-        <h6 className="mt-14 lg:mt-1">logo</h6>
+        <h6 className="mt-10 lg:mt-1">logo</h6>
         <h4 className="lg:mt-5 text-xl font-bold text-[#343434]">Sign in to your account</h4>
         {/* FORM Section */}
         <section className=" w-full mt-10  lg:mt-5 flex flex-col shadow-md p-4 lg:w-[35%] border border-slate-100">
