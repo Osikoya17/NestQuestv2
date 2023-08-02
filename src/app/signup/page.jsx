@@ -6,7 +6,7 @@ export default function signup() {
       // Main Body
       <main className="flex items-center pt-5 p-5 lg:p-0  flex-col">
         {/* Logo */}
-        <h6 className="mt-10 lg:mt-5">logo</h6>
+        <h6 className="mt-6 lg:mt-5">logo</h6>
         <h4 className="mt-2 text-xl font-bold text-[#343434]">Create an account </h4>
         {/* FORM Section */}
         <section className="w-full  mt-5 flex flex-col shadow-lg p-4 lg:w-[35%] border border-slate-100">
