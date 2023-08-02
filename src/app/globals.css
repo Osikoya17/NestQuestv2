@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.bgImag{
+  /* background-image: url('../public/footjpg2x.jpg'); */
+}
