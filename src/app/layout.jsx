@@ -11,10 +11,10 @@ export default function RootLayout({ children }) {
         <nav className='flex flex-row justify-between bg-white z-50 shadow-sm w-full h-16 p-5 sticky top-0'>
           <div className="basis-1/4 flex justify-center text-sm"><h1>logo<b>NestQuest</b></h1></div>
           <div className=" hidden basis-1/2 md:flex  justify-evenly text-slate-500">
-            <h6 className='text-sm font-bold border-b-2 border-black text-black '>Home</h6>
-            <h6 className='text-sm'>Search</h6>
-            <h6 className='text-sm'>FAQs</h6>
-            <h6 className='text-sm'>Contact Us</h6>
+            <h6 className='text-sm font-bold border-b-2 border-black text-black cursor-pointer '>Home</h6>
+            <h6 className='text-sm cursor-pointer'>Search</h6>
+            <Link href={"/faqs"}><h6 className='text-sm cursor-pointer'>FAQs</h6></Link>
+            <h6 className='text-sm cursor-pointer'>Contact Us</h6>
           </div>
           <div className="basis-1/4 flex justify-center">
             <Link href={"/login"} ><Button type='text' className='text-sm'>Sign In</Button></Link>
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         </nav>
         {children}
         <footer className='mt-10 relative w-full'>
-        <div className='absolute -z-20 w-full h-full hidden md:block'>
+        <div className='absolute -z-20 w-full h-full hidden lg:block'>
         <Image 
         src="/footpng2x.png"
         alt=''
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         layout='responsive'
         objectFit='cover'/>
           </div>
-          <div className='absolute -z-20 w-full h-full md:hidden'>
+          <div className='absolute -z-20 w-full h-full lg:hidden'>
           <Image 
           src="/footpng2x.png"
           alt=''
@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
               <span className='ml-16'>Lpsum</span>
               <span className='ml-16'>Dolor</span>
             </div>
-            <div className='text-white text-center mt-12 hidden mt- lg:flex justify-center'>
+            <div className='text-white text-center mt-12 lg:flex justify-center'>
               <Twitter className='ml-6'/>
               <FacebookIcon className='ml-6'/>
               <InstagramIcon className='ml-6'/>
