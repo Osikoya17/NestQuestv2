@@ -1,6 +1,6 @@
 import './globals.css'
 import Image from 'next/legacy/image'
-
+import {FacebookIcon, GithubIcon, InstagramIcon, Twitter} from 'lucide-react'
 import {Button} from 'antd'
 import Link from "next/link";
 
@@ -22,19 +22,29 @@ export default function RootLayout({ children }) {
           </div>
         </nav>
         {children}
-        <footer className='bg-[#376FFF] px-5 lg:pl-20 lg:pr-20 lg:pt-20 mt-10  w-full'>
-        {/* <div>
-        <Image
+        <footer className='mt-10 relative w-full'>
+        <div className='absolute -z-20 w-full h-full hidden md:block'>
+        <Image 
         src="/footpng2x.png"
-        alt=""
-        width={500}
-        height={500}
-        // layout='fill'
-        objectFit='cover'
-    />
-          </div> */}
-            <section className='lg:flex p-6 pt-6 lg:p-0  lg:pt-0 lg:justify-between flex-wrap text-white'>
-            <div className='basis-1/4 text-left mt-7 lg:mt-0'>
+        alt=''
+        className='w-full h-full'
+        width={2000}
+        height={820}
+        layout='responsive'
+        objectFit='cover'/>
+          </div>
+          <div className='absolute -z-20 w-full h-full md:hidden'>
+          <Image 
+          src="/footpng2x.png"
+          alt=''
+          className='w-full h-full'
+          width={2000}
+          height={2500}
+          layout='responsive'
+          objectFit='cover'/>
+          </div>
+          <section className='lg:flex px-5 lg:pl-20 lg:pr-20 lg:pt-20 pt-6 lg:p-0 lg:justify-between flex-wrap text-white'>
+            <div className='basis-1/4 lg:pl-7 text-left mt-7 lg:mt-0'>
               <h2 className='text-2xl font-semibold'>NestQuest</h2>
               <p className='mt-2 text-sm'>Unlock Your Dream Home: The Trusted Choice for House Rentals</p>
             </div>
@@ -44,22 +54,24 @@ export default function RootLayout({ children }) {
               <Button  className='border text-white mt-3 border-l-white'>Contact Us</Button>
             </div>
             </section>
-            <div className='border-b-2 w-full lg:mt-24'></div>
-            <div className='text-white text-center mt-5 hidden lg:block'>
+            <div className='px-6'>
+            <div className='border-b-2 w-full mt-10 lg:mt-24 px-10'></div>
+            </div>
+            <div className='text-white text-center text-sm mt-16 hidden lg:block'>
               <span className='ml-16'>About</span>
               <span className='ml-16'>Blog</span>
               <span className='ml-16'>Lorem</span>
               <span className='ml-16'>Lpsum</span>
               <span className='ml-16'>Dolor</span>
             </div>
-            <div className='text-white text-center mt-5 hidden lg:block'>
-              <span className='ml-10'>Facebook</span>
-              <span className='ml-10'>Instagram</span>
-              <span className='ml-10'>Twitter</span>
-              <span className='ml-10'>GitHub</span>
+            <div className='text-white text-center mt-12 hidden mt- lg:flex justify-center'>
+              <Twitter className='ml-6'/>
+              <FacebookIcon className='ml-6'/>
+              <InstagramIcon className='ml-6'/>
+              <GithubIcon className='ml-6'/>
             </div>
 
-            <p className='text-center mt-16 text-white'>c 2023 NestQuest Inc. All rights reserved.</p>
+            <p className='text-center mt-10 text-white'>2023 NestQuest Inc. All rights reserved.</p>
           </footer>
       </body>
     </html>
