@@ -9,7 +9,7 @@ export default function signup() {
       // Main Body
       <main style={raleway.style} className="flex items-center mb-10 p-10 lg:pt-10 flex-col">
         {/* Logo */}
-        <h6 className="mt-6 lg:mt-1">
+        <h6 className="mt-3 text-center lg:mt-1">
         <Image
             src={'/logo.png'}
             alt=''
@@ -33,16 +33,16 @@ export default function signup() {
             <Input className='h-8' name='password' label="Fullname"/>
             </div>
             <div className='flex justify-between  p-2 mt-3'>
-            <Button className='w-48 h-10 lg:h-7 text-[#ABA5A5]'> I am a Student</Button>
-            <Button className='w-48 h-10 lg:h-7 text-[#ABA5A5]'>I am a LandLord</Button>
+            <Button className='w-48 h-10 lg:h-7 text-[#ABA5A5]' style={raleway.style}> I am a Student</Button>
+            <Button className='w-48 h-10 lg:h-7 text-[#ABA5A5]' style={raleway.style}>I am a LandLord</Button>
             </div>
-            <Checkbox className='p-2 text-[#353535] mt-3'>
+            <Checkbox className='p-2 text-[#353535] mt-3' style={raleway.style}>
             I agree to all Terms and Conditions
             </Checkbox>
-            <Button type='primary' className='mt-4 h-10 bg-[#0042EC] border-none text-sm ml-2 text-white'>Sign Up</Button>
+            <Button type='primary' className='mt-4 h-10 bg-[#0042EC] border-none text-sm ml-2 text-white' style={raleway.style}>Sign Up</Button>
         </section>
 
-        <h6 className='mt-5 text-sm'> Already have an account? <span className='text-[#0042EC]'>Sign In</span></h6>
+        <h6 className='mt-5 text-sm'> Already have an account? <span className='text-[#0042EC]' >Sign In</span></h6>
 
       </main>
     )

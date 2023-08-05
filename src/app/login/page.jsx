@@ -11,7 +11,7 @@ export default function login() {
     // Main Body
     <main style={raleway.style} className="flex items-center mb-10 justify-center p-10 lg:pt-10 flex-col">
         {/* LOGO */}
-        <h6 className="mt-6 lg:mt-1">
+        <h6 className="mt-3 lg:mt-1">
         <Image
             src={'/logo.png'}
             alt=''
@@ -31,14 +31,14 @@ export default function login() {
             <Input className='h-10 lg:h-8' name='password' label="Fullname"/>
             </div>
             <div className='flex justify-between  p-2 mt-3'>
-            <Checkbox>
+            <Checkbox style={raleway.style}>
             Remember me
-            </Checkbox>
+            </Checkbox >
             <p className='text-xs text-[#0042EC]'>Forgot Password?</p>
             </div>
-            <Button type='primary' className=' h-10 mt-4 bg-[#0042EC] border-none text-sm ml-2 text-white'>Sign in</Button>
+            <Button type='primary' className=' h-10 mt-4 bg-[#0042EC] border-none text-sm ml-2 text-white' style={raleway.style}>Sign in</Button>
             <h5 className='text-center text-sm text-[#353535] mt-5'>Or</h5>
-            <Button className='mt-4 h-10 border border-slate-200 text-sm ml-2 text-black'> Sign in with Google</Button>
+            <Button className='mt-4 h-10 border border-slate-200 text-sm ml-2 text-black' style={raleway.style}> Sign in with Google</Button>
         </section>
 
         <h6 className='mt-5 text-sm'>Don't have an account? <span className='text-[#0042EC]'>Sign Up</span></h6>
