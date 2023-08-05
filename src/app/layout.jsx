@@ -1,28 +1,32 @@
 import './globals.css'
 import Image from 'next/legacy/image'
+import {Raleway} from 'next/font/google'
 import {FacebookIcon, GithubIcon, InstagramIcon, Twitter} from 'lucide-react'
 import {Button} from 'antd'
 import Link from "next/link";
 
+const raleway = Raleway({subsets:['latin']})
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body >
+      <body style={raleway.style} >
         <nav className='flex flex-row justify-between bg-white z-50 shadow-sm w-full h-16 p-5 sticky top-0'>
           <div className="basis-1/4 flex justify-center text-sm"><h1>logo<b>NestQuest</b></h1></div>
-          <div className=" hidden basis-1/2 md:flex  justify-evenly text-slate-500">
+          <div className=" hidden basis-1/2 md:flex font-medium  justify-evenly text-slate-500" >
             <h6 className='text-sm font-bold border-b-2 border-black text-black cursor-pointer '>Home</h6>
             <h6 className='text-sm cursor-pointer'>Search</h6>
-            <Link href={"/faqs"}><h6 className='text-sm cursor-pointer'>FAQs</h6></Link>
+            <Link href={"/faqs"} ><h6 className='text-sm cursor-pointer'>FAQs</h6></Link>
             <h6 className='text-sm cursor-pointer'>Contact Us</h6>
           </div>
           <div className="basis-1/4 flex justify-center">
-            <Link href={"/login"} ><Button type='text' className='text-sm'>Sign In</Button></Link>
-            <Link href={"/signup"} ><Button type='primary' className='bg-[#0042EC] border-none text-sm ml-2 h-8 text-white'>Sign Up</Button></Link>
+            <Link href={"/login"} ><Button type='text' className='text-sm' style={raleway.style}>Sign In</Button></Link>
+            <Link href={"/signup"} ><Button type='primary' className='bg-[#0042EC] border-none text-sm ml-2 h-8 text-white' style={raleway.style}>Sign Up</Button></Link>
           </div>
         </nav>
         {children}
-        <footer className='mt-10 relative w-full'>
+        <footer className='bg-[#1080cf] relative w-full' style={raleway.style}>
+        {/* DESKTOP */}
         <div className='absolute -z-20 w-full h-full hidden lg:block'>
         <Image 
         src="/footpng2x.png"
@@ -32,17 +36,7 @@ export default function RootLayout({ children }) {
         height={820}
         layout='responsive'
         objectFit='cover'/>
-          </div>
-          <div className='absolute -z-20 w-full h-full lg:hidden'>
-          <Image 
-          src="/footpng2x.png"
-          alt=''
-          className='w-full h-full'
-          width={2000}
-          height={2500}
-          layout='responsive'
-          objectFit='cover'/>
-          </div>
+        </div>
           <section className='lg:flex px-5 lg:pl-20 lg:pr-20 lg:pt-20 pt-6 lg:p-0 lg:justify-between flex-wrap text-white'>
             <div className='basis-1/4 lg:pl-7 text-left mt-7 lg:mt-0'>
               <h2 className='text-2xl font-semibold'>NestQuest</h2>
@@ -64,7 +58,7 @@ export default function RootLayout({ children }) {
               <span className='ml-16'>Lpsum</span>
               <span className='ml-16'>Dolor</span>
             </div>
-            <div className='text-white text-center mt-12 lg:flex justify-center'>
+            <div className='text-white text-center mt-12 flex justify-center'>
               <Twitter className='ml-6'/>
               <FacebookIcon className='ml-6'/>
               <InstagramIcon className='ml-6'/>

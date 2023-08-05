@@ -1,11 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import {Button,Input,Checkbox} from 'antd'
+import {Raleway} from 'next/font/google'
+// import GoogleIcon from '@mui/icons-material/Google';
 // import {GoogleOutlined} from '@ant-design/icons';
+const raleway = Raleway({subsets:['latin']})
 
 export default function login() {
   return (
     // Main Body
-    <main className="flex items-center justify-center p-10 lg:pt-10 flex-col">
+    <main style={raleway.style} className="flex items-center mb-10 justify-center p-10 lg:pt-10 flex-col">
         {/* LOGO */}
         <h6 className="mt-6 lg:mt-1">logo</h6>
         <h4 className="lg:mt-5 text-xl font-bold text-[#343434]">Sign in to your account</h4>
@@ -27,7 +30,7 @@ export default function login() {
             </div>
             <Button type='primary' className=' h-10 mt-4 bg-[#0042EC] border-none text-sm ml-2 text-white'>Sign in</Button>
             <h5 className='text-center text-sm text-[#353535] mt-5'>Or</h5>
-            <Button className='mt-4 h-10 border border-slate-200 text-sm ml-2 text-black'>Sign in with Google</Button>
+            <Button className='mt-4 h-10 border border-slate-200 text-sm ml-2 text-black'> Sign in with Google</Button>
         </section>
 
         <h6 className='mt-5 text-sm'>Don't have an account? <span className='text-[#0042EC]'>Sign Up</span></h6>
