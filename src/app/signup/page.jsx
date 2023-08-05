@@ -1,12 +1,22 @@
 import { Button,Checkbox, Input} from 'antd';
+import {Raleway} from 'next/font/google'
+import Image from 'next/legacy/image'
 
+const raleway = Raleway({subsets:['latin']})
 
 export default function signup() {
     return (
       // Main Body
-      <main className="flex items-center pt-5 p-5 lg:p-0  flex-col">
+      <main style={raleway.style} className="flex items-center mb-10 p-10 lg:pt-10 flex-col">
         {/* Logo */}
-        <h6 className="mt-6 lg:mt-5">logo</h6>
+        <h6 className="mt-6 lg:mt-1">
+        <Image
+            src={'/logo.png'}
+            alt=''
+            width={150}
+            height={50}
+            />
+        </h6>
         <h4 className="mt-2 text-xl font-bold text-[#343434]">Create an account </h4>
         {/* FORM Section */}
         <section className="w-full  mt-5 flex flex-col shadow-lg p-4 lg:w-[35%] border border-slate-100">
