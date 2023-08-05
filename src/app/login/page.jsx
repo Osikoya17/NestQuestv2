@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import {Button,Input,Checkbox} from 'antd'
 import {Raleway} from 'next/font/google'
+import Image from 'next/legacy/image'
 // import GoogleIcon from '@mui/icons-material/Google';
 // import {GoogleOutlined} from '@ant-design/icons';
 const raleway = Raleway({subsets:['latin']})
@@ -10,7 +11,14 @@ export default function login() {
     // Main Body
     <main style={raleway.style} className="flex items-center mb-10 justify-center p-10 lg:pt-10 flex-col">
         {/* LOGO */}
-        <h6 className="mt-6 lg:mt-1">logo</h6>
+        <h6 className="mt-6 lg:mt-1">
+        <Image
+            src={'/logo.png'}
+            alt=''
+            width={150}
+            height={50}
+            />
+        </h6>
         <h4 className="lg:mt-5 text-xl font-bold text-[#343434]">Sign in to your account</h4>
         {/* FORM Section */}
         <section className=" w-full mt-10  lg:mt-5 flex flex-col shadow-md p-4 lg:w-[35%] border border-slate-100">

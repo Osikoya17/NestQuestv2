@@ -12,7 +12,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body style={raleway.style} >
         <nav className='flex flex-row justify-between bg-white z-50 shadow-sm w-full h-16 p-5 sticky top-0'>
-          <div className="basis-1/4 flex justify-center text-sm"><h1>logo<b>NestQuest</b></h1></div>
+          <div className="basis-1/4 flex justify-center text-sm">
+            <Image
+            src={'/logo.png'}
+            alt=''
+            width={100}
+            height={100}
+            />
+          </div>
           <div className=" hidden basis-1/2 md:flex font-medium  justify-evenly text-slate-500" >
             <h6 className='text-sm font-bold border-b-2 border-black text-black cursor-pointer '>Home</h6>
             <h6 className='text-sm cursor-pointer'>Search</h6>
