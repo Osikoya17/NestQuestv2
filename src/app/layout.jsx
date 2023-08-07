@@ -16,7 +16,12 @@ export default function RootLayout({ children }) {
         <nav className="flex flex-row justify-between bg-white z-50 shadow-sm w-full h-16 p-5 sticky top-0">
           <div className="basis-1/4 flex justify-center text-sm">
             <Link href={"/"}>
-              <Image src="/NestQuestLogo.png" width={110} height={30} />
+              <Image
+                src="/NestQuestLogo.png"
+                width={110}
+                height={30}
+                alt="NestQuest"
+              />
             </Link>
           </div>
           <div className=" hidden basis-1/2 md:flex  justify-evenly text-slate-500">
@@ -65,7 +70,7 @@ export default function RootLayout({ children }) {
           <div className="absolute -z-20 w-full h-full hidden lg:block">
             <Image
               src="/footpng2x.png"
-              alt=""
+              alt="NestQuest"
               className="w-full h-full"
               width={2000}
               height={820}
@@ -76,7 +81,7 @@ export default function RootLayout({ children }) {
           <div className="absolute -z-20 w-full h-full lg:hidden">
             <Image
               src="/footpng2x.png"
-              alt=""
+              alt="NestQuest"
               className="w-full h-full"
               width={2000}
               height={2500}

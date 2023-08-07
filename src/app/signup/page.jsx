@@ -7,7 +7,12 @@ export default function signup() {
     <main className="flex items-center pt-5 p-5 lg:p-0  flex-col">
       {/* Logo */}
       <h6 className="mt-6 lg:mt-5">
-        <Image src="/NestQuestLogo.png" width={110} height={30} />
+        <Image
+          src="/NestQuestLogo.png"
+          width={110}
+          height={30}
+          alt="NestQuest"
+        />
       </h6>
 
       <h4 className="mt-2 text-xl font-bold text-[rgb(52,52,52)]">

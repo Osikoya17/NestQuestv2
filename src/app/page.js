@@ -23,7 +23,7 @@ import {
   MediumGreenDot,
   SmallStarIcon,
   MessagingIconLeft,
-} from "./icon.js";
+} from "./utils/util_icon.js";
 
 const lat = Lato({
   subsets: ["latin"],

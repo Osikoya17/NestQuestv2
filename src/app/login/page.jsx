@@ -9,7 +9,12 @@ export default function login() {
     <main className="flex items-center justify-center p-10 lg:pt-10 flex-col">
       {/* LOGO */}
       <h6 className="mt-6 lg:mt-1">
-        <Image src="/NestQuestLogo.png" width={110} height={30} />
+        <Image
+          src="/NestQuestLogo.png"
+          width={110}
+          height={30}
+          alt="NestQuest"
+        />
       </h6>
       <h4 className="lg:mt-5 text-xl font-bold text-[#343434]">
         Sign in to your account
