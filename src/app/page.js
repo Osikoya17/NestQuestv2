@@ -1,7 +1,7 @@
 import { Button } from "antd";
 import { Lato } from "next/font/google";
 import Image from "next/image.js";
-import MyComponent from "./components/Product";
+
 import { AiOutlineStar } from "react-icons/ai";
 import { IoIosArrowDropright, IoIosArrowDropleft } from "react-icons/io";
 
@@ -23,7 +23,7 @@ import {
   MediumGreenDot,
   SmallStarIcon,
   MessagingIconLeft,
-} from "./components/icon.js";
+} from "./icon.js";
 
 const lat = Lato({
   subsets: ["latin"],
@@ -127,7 +127,12 @@ export default async function Home() {
             className="w-60 h-60 px-4 shadow-2xl bg-white rounded-lg relative"
           >
             <div id="image">
-              <Image src="/CarouselImages.png" width={250} height={100} />
+              <Image
+                src="/CarouselImages.png"
+                width={250}
+                height={100}
+                alt="NestQuest"
+              />
             </div>
             <div id="content" className="mt-2">
               <h5 className="font-bold">$1250/year</h5>
@@ -148,7 +153,12 @@ export default async function Home() {
             className=" md:w-60 h-60 shadow-2xl px-4 bg-white relative rounded-xl xs:hidden "
           >
             <div id="image">
-              <Image src="/CarouselImages.png" width={250} height={100} />
+              <Image
+                src="/CarouselImages.png"
+                width={250}
+                height={100}
+                alt="NestQuest"
+              />
             </div>
             <div id="content" className="mt-2">
               <h5 className="font-bold">$1250/year</h5>
@@ -169,7 +179,12 @@ export default async function Home() {
             className="md:w-60 h-60 px-4 shadow-2xl bg-white relative rounded-xl xs:hidden"
           >
             <div id="image">
-              <Image src="/CarouselImages.png" width={250} height={100} />
+              <Image
+                src="/CarouselImages.png"
+                width={250}
+                height={100}
+                alt="NestQuest"
+              />
             </div>
             <div id="content" className="mt-2">
               <h5 className="font-bold">$1250/year</h5>
@@ -185,7 +200,7 @@ export default async function Home() {
               <p>10% OFF</p>
             </div>
           </div>
-          <div className="mt-32">
+          <div className="mt-32 ">
             <IoIosArrowDropright className="fill-[#376FFF]" />
           </div>
         </div>
@@ -353,14 +368,16 @@ export default async function Home() {
           <div id="imageA" className="">
             <Image
               src="/Unlock Potential (2).png"
-              alt=""
+              alt="NestQuest"
               width={300}
               height={250}
               // layout="responsive"
             />
           </div>
           <div id="ContentA" className=" flex flex-col space-y-6">
-            <h2 className="font-bold">Unlock your property&apos;s potential</h2>
+            <h2 className="font-bold w-[60%] text-lg">
+              Unlock your property&apos;s potential
+            </h2>
             <p className="text-[#524F4F] text-xs">
               Unlock your property&apos;s potential by effortlessly
             </p>
@@ -383,15 +400,17 @@ export default async function Home() {
           <div id="imageB" className="">
             <Image
               src="/Your information.png"
-              alt=""
+              alt="NestQuest"
               // className="w-full ssh-full"
               width={300}
-              height={300}
-              // layout="responsive
+              height={250}
+              // layout="responsive"s
             />
           </div>
           <div id="ContentB" className="flex flex-col space-y-4">
-            <h2 className="font-bold">Your Information, Our Priority</h2>
+            <h2 className="font-bold w-[65%] text-lg ">
+              Your Information, Our Priority
+            </h2>
             <p className="text-[#524F4F] text-xs ">
               Rest easy as we prioritize your security and
             </p>
@@ -414,7 +433,7 @@ export default async function Home() {
       {/* Faqs Section */}
       <section
         id="Faqs_section"
-        className="grid mt-44 grid-cols-1 gap-6 sm:grid-cols-2"
+        className="grid mt-28 grid-cols-1 gap-6 sm:grid-cols-2"
       >
         <div id="faq_list_a" className="space-y-6">
           <div id="freq_top_heading" className="mt-3 flex space-x-3">
