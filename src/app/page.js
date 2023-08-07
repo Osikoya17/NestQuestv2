@@ -218,7 +218,7 @@ export default async function Home() {
             <p className="text-[#524F4F] md:text-md ">
               Heres our top ten ranking apartments,
             </p>
-            <p className="text-[#524F4F]">Rated by our top experts!</p>
+            <p className="text-[#030303]">Rated by our top experts!</p>
           </div>
           <div id="button" className="flex justify-center md:justify-start">
             <Button
@@ -244,13 +244,13 @@ export default async function Home() {
                 </div>
               </div>
               <h5 className="font-bold">Smart Search Algorithm</h5>
-              <p className="text-[#524F4F] md:text-xs">
+              <p className="text-[#524F4F] md:text-sm">
                 Tailored student homes,just
               </p>
-              <p className="text-[#524F4F]  md:text-xs">
+              <p className="text-[#524F4F]  md:text-sm">
                 for you—budget-friendly
               </p>
-              <p className="text-[#524F4F]  md:text-xs">and personalized.</p>
+              <p className="text-[#524F4F]  md:text-sm">and personalized.</p>
             </div>
             {/* list 2 */}
             <div id="item2" className="flex flex-col space-y-1">
@@ -266,13 +266,13 @@ export default async function Home() {
                 </div>
               </div>
               <h4 className="font-bold">Transparent Communication</h4>
-              <p className="text-[#524F4F]  md:text-xs">
+              <p className="text-[#524F4F]  md:text-sm">
                 Build trust with direct landlord
               </p>
-              <p className="text-[#524F4F] md:text-xs">
+              <p className="text-[#524F4F] md:text-sm">
                 communication,informed
               </p>
-              <p className="text-[#524F4F] md:text-xs">decisions made easy.</p>
+              <p className="text-[#524F4F] md:text-sm">decisions made easy.</p>
             </div>
             {/* item 3 */}
             <div
@@ -288,9 +288,9 @@ export default async function Home() {
                 </div>
               </div>
               <h4 className="font-bold">Roommate Matching</h4>
-              <p className="text-[#524F4F] md:text-xs">Discover compatible</p>
-              <p className="text-[#524F4F] md:text-xs">roommates through our</p>
-              <p className="text-[#524F4F] md:text-xs">
+              <p className="text-[#524F4F] md:text-sm">Discover compatible</p>
+              <p className="text-[#524F4F] md:text-sm">roommates through our</p>
+              <p className="text-[#524F4F] md:text-sm">
                 cutting-edge algorithm.
               </p>
             </div>
@@ -313,13 +313,13 @@ export default async function Home() {
                 </div>
               </div>
               <h4 className="font-bold">List Houses Effectively</h4>
-              <p className="text-[#524F4F] text-center md:text-xs">
+              <p className="text-[#524F4F] text-center md:text-sm">
                 Hassle-free property
               </p>
-              <p className="text-[#524F4F] text-center  md:text-xs">
+              <p className="text-[#524F4F] text-center  md:text-sm">
                 showcase,reaching eager
               </p>
-              <p className="text-[#524F4F] text-center  md:text-xs">
+              <p className="text-[#524F4F] text-center  md:text-sm">
                 student renters
               </p>
             </div>
@@ -341,13 +341,13 @@ export default async function Home() {
                 </div>
               </div>
               <h4 className="font-bold">Strong Ratings</h4>
-              <p className="text-[#524F4F] text-center md:text-xs">
+              <p className="text-[#524F4F] text-center md:text-sm">
                 Community-backed
               </p>
-              <p className="text-[#524F4F] text-center md:text-xs">
+              <p className="text-[#524F4F] text-center md:text-sm">
                 assurance for well-informed.
               </p>
-              <p className="text-[#524F4F] md:text-xs">
+              <p className="text-[#524F4F] md:text-sm">
                 accommodation choices.
               </p>
             </div>
@@ -378,19 +378,19 @@ export default async function Home() {
             <h2 className="font-bold w-[60%] text-lg">
               Unlock your property&apos;s potential
             </h2>
-            <p className="text-[#524F4F] text-xs">
+            <p className="text-[#524F4F] text-sm">
               Unlock your property&apos;s potential by effortlessly
             </p>
-            <p className="text-[#524F4F] text-xs">
+            <p className="text-[#524F4F] text-sm">
               listing with us, reaching a vast audiences eager
             </p>
-            <p className="text-[#524F4F] text-xs">
+            <p className="text-[#524F4F] text-sm">
               students, and building trust through direct
             </p>
-            <p className="text-[#524F4F] text-xs">
+            <p className="text-[#524F4F] text-sm">
               communication–making renting easier and more
             </p>
-            <p className="text-[#524F4F] text-xs">rewarding!</p>
+            <p className="text-[#524F4F] text-sm">rewarding!</p>
           </div>
         </div>
         <div
@@ -411,29 +411,29 @@ export default async function Home() {
             <h2 className="font-bold w-[65%] text-lg ">
               Your Information, Our Priority
             </h2>
-            <p className="text-[#524F4F] text-xs ">
+            <p className="text-[#524F4F] text-sm">
               Rest easy as we prioritize your security and
             </p>
-            <p className="text-[#524F4F] text-xs ">
+            <p className="text-[#524F4F] text-sm">
               privacy,implementing robust safety
             </p>
-            <p className="text-[#524F4F] text-xs">
+            <p className="text-[#524F4F] text-sm">
               measures to protect your personal
             </p>
-            <p className="text-[#524F4F] text-xs ">
+            <p className="text-[#524F4F] text-sm">
               information and ensure a worry-free
             </p>
-            <p className="text-[#524F4F] text-xs ">
+            <p className="text-[#524F4F] text-sm">
               experience in finding the perfect student
             </p>
-            <p className="text-[#524F4F] text-xs">home with NestQuest.</p>
+            <p className="text-[#524F4F] text-sm">home with NestQuest.</p>
           </div>
         </div>
       </section>
       {/* Faqs Section */}
       <section
         id="Faqs_section"
-        className="grid mt-28 grid-cols-1 gap-6 sm:grid-cols-2"
+        className="grid mt-20 grid-cols-1 gap-6 sm:grid-cols-2"
       >
         <div id="faq_list_a" className="space-y-6">
           <div id="freq_top_heading" className="mt-3 flex space-x-3">
@@ -442,7 +442,7 @@ export default async function Home() {
             </div>
             <div id="freq_top_heading_content">
               <h1 className="font-bold">Frequently Asked Questions</h1>
-              <p className="text-[#524F4F] text-xs">
+              <p className="text-[#524F4F] text-sm">
                 Your Top Questions Thoughtfully Answered by NestQuest&apos;s
                 Accommodation Experts!
               </p>
@@ -454,10 +454,10 @@ export default async function Home() {
               <SmallYellowDot />
             </div>
             <div id="freq_top_heading_content flex flex-col ">
-              <h5 className="font-bold text-xs">
+              <h5 className="font-bold text-md">
                 Is NestQuest available in my city?
               </h5>
-              <p className="text-[#524F4F] text-xs">
+              <p className="text-[#524F4F] text-sm">
                 Ans: NestQuest is continuously expanding its reach. Currently,we
                 operate in major cities and university towns, and we are
                 actively working to include more locations.
@@ -470,11 +470,11 @@ export default async function Home() {
               <SmallGreenDot />
             </div>
             <div id="freq_top_heading_content">
-              <h5 className="font-bold text-xs">
+              <h5 className="font-bold text-md">
                 Can I leave reviews for the accommodations I&apos;ve
                 experienced?
               </h5>
-              <p className="text-[#524F4F] text-xs">
+              <p className="text-[#524F4F] text-sm">
                 Ans: Absolutely! We encourage users to share their feedback and
                 leave reviews for the accommodations they&apos;ve used, helping
                 the community make well-informed decisions.
@@ -482,17 +482,17 @@ export default async function Home() {
             </div>
           </div>
         </div>
-        <div id="faq_list_b" className="sm:mt-6 space-y-6 ">
+        <div id="faq_list_b" className="sm:mt-2 space-y-6 ">
           {/* question 3 */}
           <div id="freq_top_heading" className="flex space-x-3 -space-y-1.5">
             <div id="heading_line">
               <SmallBlueDot />
             </div>
             <div id="freq_top_heading_content">
-              <h5 className="font-bold text-xs">
+              <h5 className="font-bold text-sm">
                 How does NestQuest work for students?
               </h5>
-              <p className="text-[#524F4F] text-xs">
+              <p className="text-[#524F4F] text-sm">
                 Ans: NestQuest&apos;s smart search matches student preferences
                 with available accommodations, enabling direct landlord
                 communication for transparency.
@@ -505,26 +505,26 @@ export default async function Home() {
               <SmallBrownDot />
             </div>
             <div id="freq_top_heading_content">
-              <h5 className="font-bold text-xs">
+              <h5 className="font-bold text-md">
                 How does NestQuest work for students?
               </h5>
-              <p className="text-xs ">
+              <p className="text-sm">
                 Ans: NestQuest&apos;s smart search matches student preferences
                 with available accommodations, enabling direct landlord
                 communication for transparency.
               </p>
             </div>
           </div>
-          {/* question 3 */}
+          {/* question 5 */}
           <div id="freq_top_heading" className="flex space-x-3 -space-y-1.5">
             <div id="heading_line">
               <SmallPurpleDot />
             </div>
             <div id="freq_top_heading_content">
-              <h5 className="font-bold text-xs">
+              <h5 className="font-bold text-md">
                 How does NestQuest work for students?
               </h5>
-              <p className="text-[#524F4F] text-xs">
+              <p className="text-[#524F4F] text-sm">
                 Ans: NestQuest&apos;s smart search matches student preferences
                 with available accommodations, enabling direct landlord
                 communication for transparency.
