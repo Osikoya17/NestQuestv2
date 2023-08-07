@@ -1,16 +1,20 @@
 import { Button, Checkbox, Input } from "antd";
+import Image from "next/image";
 
 export default function signup() {
   return (
     // Main Body
     <main className="flex items-center pt-5 p-5 lg:p-0  flex-col">
       {/* Logo */}
-      <h6 className="mt-6 lg:mt-5">logo</h6>
-      <h4 className="mt-2 text-xl font-bold text-[#343434]">
+      <h6 className="mt-6 lg:mt-5">
+        <Image src="/NestQuestLogo.png" width={110} height={30} />
+      </h6>
+
+      <h4 className="mt-2 text-xl font-bold text-[rgb(52,52,52)]">
         Create an account{" "}
       </h4>
       {/* FORM Section */}
-      <section className="w-full  mt-5 flex flex-col shadow-lg p-4 lg:w-[35%] border border-slate-100">
+      <form className="w-full  mt-5 flex flex-col shadow-lg p-4 lg:w-[35%] border border-slate-100">
         <div className="p-2">
           <label htmlFor="fullname" className="text-sm text-[#353535]">
             Fullname
@@ -42,13 +46,12 @@ export default function signup() {
           I agree to all Terms and Conditions
         </Checkbox>
         <Button
-          type="primary"
+          type="submit"
           className="mt-4 h-10 bg-[#0042EC] border-none text-sm ml-2 text-white"
         >
           Sign Up
         </Button>
-      </section>
-
+      </form>
       <h6 className="mt-5 text-sm">
         {" "}
         Already have an account? <span className="text-[#0042EC]">Sign In</span>

@@ -15,21 +15,34 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <nav className="flex flex-row justify-between bg-white z-50 shadow-sm w-full h-16 p-5 sticky top-0">
           <div className="basis-1/4 flex justify-center text-sm">
-            <h1>
-              logo<b>NestQuest</b>
-            </h1>
+            <Link href={"/"}>
+              <Image src="/NestQuestLogo.png" width={110} height={30} />
+            </Link>
           </div>
           <div className=" hidden basis-1/2 md:flex  justify-evenly text-slate-500">
             <Link href="/">
-              <h6 className="text-sm font-bold border-b-2 border-black text-black cursor-pointer ">
+              <h6 className="text-sm font-bold border-b-2  border-black   text-black cursor-pointers">
                 Home
               </h6>
             </Link>
-            <h6 className="text-sm cursor-pointer">Search</h6>
-            <Link href={"/faqs"}>
-              <h6 className="text-sm cursor-pointer">FAQs</h6>
+            <Link href="/about">
+              <h6 className="text-sm cursor-pointer   border-black">
+                About Us
+              </h6>
             </Link>
-            <h6 className="text-sm cursor-pointer">Contact Us</h6>
+            <Link href={"/faqs"}>
+              <h6 className="text-sm cursor-pointer   border-black">FAQs</h6>
+            </Link>
+            <Link href={"/contact"}>
+              <h6 className="text-sm cursor-pointer   border-black">
+                Contact Us
+              </h6>
+            </Link>
+            <Link href={"/dashboard"}>
+              <h6 className="text-sm cursor-pointer   border-black">
+                Dashboard
+              </h6>
+            </Link>
           </div>
           <div className="basis-1/4 flex justify-center">
             <Link href={"/login"}>
