@@ -19,7 +19,7 @@ import Maps from '../../../public/map.svg'
 
 import Room from '../../../public/room.svg'
 
-const lato = Lato({subsets:['latin'],weight:["100","700"]})
+const lato = Lato({subsets:['latin'],weight:["300","700"]})
 const raleway = Raleway({subsets:['latin']})
 export default function page() {
   return (
@@ -74,7 +74,7 @@ export default function page() {
             <header className='bg-[#E8EEFF] flex justify-evenly items-center w-full h-44 rounded'>
                 <div className='' style={lato.style}>
                     <h1 className='text-2xl font-semibold'>Hi, Jane</h1>
-                    <h5 className='text-[#515151] font-medium'>Ready to find your perfect apartment?</h5>
+                    <h5 className='text-[#515151] font-'>Ready to find your perfect apartment?</h5>
                 </div>
                 <div>
                 <Image
@@ -86,11 +86,11 @@ export default function page() {
             <section className='flex p-5 px-10 text-lg font-light'  style={lato.style}>
                 <div className='flex p-3 px-5 justify-center bg-[#E8EEFF] rounded items-center'>
                     <ListMinus />
-                    <span className='ml-1 font-light'>Listing</span>
+                    <span className='ml-1 font-medium'>Listing</span>
                 </div>
                 <div className='flex p-3 justify-center items-center'>
                     <Star />
-                    <span className='ml-1 font-light'> Favourites</span>
+                    <span className='ml-1 font-medium'> Favourites</span>
                 </div>
             </section>
             <section className='p-3'>
