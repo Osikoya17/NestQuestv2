@@ -1,9 +1,12 @@
+'use client'
 import './globals.css'
 import Image from 'next/legacy/image'
 import {Raleway} from 'next/font/google'
-import {FacebookIcon, GithubIcon, InstagramIcon, Twitter} from 'lucide-react'
+import {FacebookIcon, GithubIcon, InstagramIcon, Twitter, AlignJustify} from 'lucide-react'
 import {Button} from 'antd'
 import Link from "next/link";
+import Logo from "../../public/logo.svg"
+import {useRef} from 'react'
 
 const raleway = Raleway({subsets:['latin']})
 
@@ -12,18 +15,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body style={raleway.style} >
         <nav className='flex flex-row justify-between bg-white z-50 shadow-sm w-full h-16 p-5 sticky top-0'>
-          <div className="basis-1/4 flex justify-center text-sm">
+          <div className="lg:basis-1/4  flex justify-center text-sm">
+           <Button className='flex items-center justify-start border-none lg:hidden'><AlignJustify size={30} /></Button>
             <Image
-            src={'/logo.png'}
+            src={Logo}
             alt=''
-            width={100}
-            height={100}
             />
           </div>
-          <div className=" hidden basis-1/2 md:flex font-medium  justify-evenly text-slate-500" >
+          <div className=" hidden basis-1/2 md:flex font-medium  justify-evenly " >
             <h6 className='text-sm font-bold border-b-2 border-black text-black cursor-pointer '>Home</h6>
-            <h6 className='text-sm cursor-pointer'>Search</h6>
-            <Link href={"/faqs"} ><h6 className='text-sm cursor-pointer'>FAQs</h6></Link>
+            <h6 className='text-sm cursor-pointer'>About Us</h6>
+            <Link href={"/support "} ><h6 className='text-sm cursor-pointer'>FAQs</h6></Link>
             <h6 className='text-sm cursor-pointer'>Contact Us</h6>
           </div>
           <div className="basis-1/4 flex justify-center">
@@ -59,11 +61,11 @@ export default function RootLayout({ children }) {
             <div className='border-b-2 w-full mt-10 lg:mt-24 px-10'></div>
             </div>
             <div className='text-white text-center text-sm mt-16 hidden lg:block'>
-              <span className='ml-16'>About</span>
-              <span className='ml-16'>Blog</span>
-              <span className='ml-16'>Lorem</span>
-              <span className='ml-16'>Lpsum</span>
-              <span className='ml-16'>Dolor</span>
+              <span className='ml-16'>About Us</span>
+              <span className='ml-16'>FAQs</span>
+              <span className='ml-16'>Terms and Conditions</span>
+              <span className='ml-16'>Contact Us</span>
+              
             </div>
             <div className='text-white text-center mt-12 flex justify-center'>
               <Twitter className='ml-6'/>
