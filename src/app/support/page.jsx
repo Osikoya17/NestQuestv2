@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import Sidebar from "../../components/Sidebar"
+import {Sidebar} from "@/components/Sidebar"
 import {LayoutDashboard,
   CreditCard,
   Search,
