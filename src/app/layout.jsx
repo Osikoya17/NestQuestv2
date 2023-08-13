@@ -2,21 +2,28 @@
 import './globals.css'
 import Image from 'next/legacy/image'
 import {Raleway} from 'next/font/google'
-import {FacebookIcon, GithubIcon, InstagramIcon, Twitter, AlignJustify} from 'lucide-react'
+import {FacebookIcon, GithubIcon, InstagramIcon, Twitter, AlignJustify,X} from 'lucide-react'
 import {Button} from 'antd'
 import Link from "next/link";
 import Logo from "../../public/logo.svg"
-import {useRef} from 'react'
+import {useRef , useState} from 'react'
 
 const raleway = Raleway({subsets:['latin']})
 
 export default function RootLayout({ children }) {
+  const [user,setUser] = useState(false)
+  const [expanded,setExpanded] = useState(false)
+
+  const toogleNav = () =>{
+    (expanded ? setExpanded(false) : setExpanded(true))
+  }
+
   return (
     <html lang="en">
       <body style={raleway.style} >
         <nav className='flex flex-row justify-between bg-white z-50 shadow-sm w-full h-16 p-5 sticky top-0'>
-          <div className="lg:basis-1/4  flex justify-center text-sm">
-           <Button className='flex items-center justify-start border-none lg:hidden'><AlignJustify size={30} /></Button>
+          <div className="lg:basis-1/4 flex justify-center text-sm ">
+           <Button onClick={toogleNav} className='flex items-center justify-start border-none lg:hidden'>{expanded? <X size={30} /> : <AlignJustify size={30} />}</Button>
             <Image
             src={Logo}
             alt=''
@@ -28,11 +35,33 @@ export default function RootLayout({ children }) {
             <Link href={"/support "} ><h6 className='text-sm cursor-pointer'>FAQs</h6></Link>
             <h6 className='text-sm cursor-pointer'>Contact Us</h6>
           </div>
-          <div className="basis-1/4 flex justify-center">
-            <Link href={"/login"} ><Button type='text' className='text-sm' style={raleway.style}>Sign In</Button></Link>
-            <Link href={"/signup"} ><Button type='primary' className='bg-[#0042EC] border-none text-sm ml-2 h-8 text-white' style={raleway.style}>Sign Up</Button></Link>
+          {user && 
+          <div className='basis-1/4 flex mb-5 justify-center'>
+            <div className='leading-2'>
+              <h1 className='font-semibold'>John Doe</h1>
+              <p className='text-sm text-right -mt-2'>Student</p>
+            </div>
+            <div className='bg-slate-200 rounded-full w-8 h-8 ml-1'>
+              {/* <Image
+              /> */}
+            </div>
           </div>
+          }
+          {!user &&
+          <div className="basis-1/4 flex justify-center">
+          <Link href={"/login"} ><Button type='text' className='text-sm' style={raleway.style}>Sign In</Button></Link>
+          <Link href={"/signup"} ><Button type='primary' className='bg-[#0042EC] border-none text-sm ml-2 h-8 text-white' style={raleway.style}>Sign Up</Button></Link>
+        </div>
+        }
         </nav>
+        {expanded && 
+            <div className='w-full block lg:hidden absolute bg-white shadow-md z-50'>
+              <Link href={"/home"}><h3 className='border flex text-center p-5'>Home</h3></Link>
+              <Link href={"/about-us"}><h3 className='border flex text-center p-5'>About Us</h3></Link>
+              <Link href={"/faqs"}><h3 className='border flex text-center p-5'>FAQs</h3></Link>
+              <Link href={"/contact"}><h3 className='border flex text-center p-5'>Contact Us</h3></Link>
+            </div>
+          }
         {children}
         <footer className='bg-[#1080cf] relative w-full' style={raleway.style}>
         {/* DESKTOP */}
