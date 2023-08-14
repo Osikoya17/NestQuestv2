@@ -1,6 +1,5 @@
 import { Sidebar } from "@/components/Sidebar";
 import {Lato, Raleway} from 'next/font/google'
-import Lady from '../../../public/people.svg'
 import Image from "next/legacy/image"
 import Link from 'next/link'
 

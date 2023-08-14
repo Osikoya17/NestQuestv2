@@ -13,7 +13,7 @@ import {
 import { Button } from "antd";
 import Link from "next/link";
 import Logo from "../../public/logo.svg";
-import { useRef, useState, createContext } from "react";
+import {useState, createContext } from "react";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -22,7 +22,6 @@ export const CarouselContext = createContext();
 export default function RootLayout({ children }) {
   const [user, setUser] = useState(false);
   const [expanded, setExpanded] = useState(false);
-  const [homes, setHomes] = useState(null);
 
   const toogleNav = () => {
     expanded ? setExpanded(false) : setExpanded(true);
@@ -54,7 +53,6 @@ export default function RootLayout({ children }) {
               <p className='text-sm text-right -mt-2'>Student</p>
             </div>
             <div className='bg-slate-200 rounded-full w-8 h-8 ml-1'>
-              </div>
             </div>
           </div>
           }
@@ -72,7 +70,6 @@ export default function RootLayout({ children }) {
               <Link href={"/faqs"}><h3 className='border flex text-center p-5'>FAQs</h3></Link>
               <Link href={"/contact"}><h3 className='border flex text-center p-5'>Contact Us</h3></Link>
             </div>}
-          )}
         {children}
         <footer className="bg-[#1080cf] relative w-full" style={raleway.style}>
           {/* DESKTOP */}

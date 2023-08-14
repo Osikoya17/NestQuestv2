@@ -9,6 +9,7 @@ import {
     Share,
     Heart
   } from 'lucide-react'
+import {homes} from '../data' 
 import {faHeart} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {Lato, Raleway} from 'next/font/google'
@@ -18,12 +19,8 @@ import Image from "next/legacy/image"
 import Lady from '../../../public/people.svg'
 import Maps from '../../../public/map.svg'
 import Room from '../../../public/room.svg'
-import { useRef } from 'react'
+import { useRef , useState } from 'react'
 import { Sidebar } from '@/components/Sidebar'
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Lato, Raleway } from "next/font/google";
-import { Button, Input, Dropdown } from "antd";
 
 const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 const raleway = Raleway({ subsets: ["latin"] });
@@ -71,138 +68,49 @@ export default function Dashboard() {
           </section>
           <section className="flex px-3 text-lg font-light" style={lato.style}>
             <div className="flex justify-center bg-[#E8EEFF] rounded items-center">
-              {/* <Dropdown.Button>
-                    Submit
-                </Dropdown.Button> */}
             </div>
-            <div className="flex justify-center items-center ml-2">
+            {/* <div className="flex justify-center items-center ml-2">
               <Star />
               <span className="ml-1 font-medium"> Favourites</span>
-            </div>
+            </div> */}
           </section>
-          <section className="p-3 mt-3 lg:mt-0">
-            <div className="flex flex-wrap lg:justify-between justify-center  shadow-md rounded p-3 border border-slate-300">
-              <div className="flex items-center">
-                <Image src={Room} alt="" />
-              </div>
-              <div className="ml-5 text-[#515151] space-y-2">
-                <h1 className="text-xl font-semibold w-48">
-                  2 bedroom flat lorem
-                </h1>
-                <h5 className="w-44">Lara's avenue, Damico, Ile-ife</h5>
-                <h6 className="flex items-center">
-                  4.5 <Star size={15} />
-                </h6>
-                <h3 className="flex items-center">
-                  <ThumbsUp size={20} />
-                  1.1k <Share className="ml-3" size={20} />
-                  1.1k <MessageSquare className="ml-3" size={20} />
-                  1.1k{" "}
-                </h3>
-              </div>
-              <div className="flex lg:flex-col justify-between  w-full lg:w-32 mt-3 lg:mt-0 items-end">
-                <Heart
-                  ref={show}
-                  onClick={ChangeColor}
-                  className="cursor-pointer"
-                />
-                <div ref={hide} className="text-lg w-6 hidden">
-                  <FontAwesomeIcon
-                    icon={faHeart}
-                    style={{ color: "#da1616" }}
-                  />
-                </div>
-                <span className="text-lg font-bold text-[#3d6ef4]">
-                  $1,150 / year
-                </span>
-              </div>
-            </div>
-          </section>
-          <section className="p-3 mt-3 lg:mt-0">
-            <div className="flex flex-wrap lg:justify-between justify-center  shadow-md rounded p-3 border border-slate-300">
-              <div className="flex items-center">
-                <Image src={Room} alt="" />
-              </div>
-              <div className="ml-5 text-[#515151] space-y-2">
-                <h1 className="text-xl font-semibold w-48">
-                  2 bedroom flat lorem
-                </h1>
-                <h5 className="w-44">Lara's avenue, Damico, Ile-ife</h5>
-                <h6 className="flex items-center">
-                  4.5 <Star size={15} />
-                </h6>
-                <h3 className="flex items-center">
-                  <ThumbsUp size={20} />
-                  1.1k <Share className="ml-3" size={20} />
-                  1.1k <MessageSquare className="ml-3" size={20} />
-                  1.1k{" "}
-                </h3>
-              </div>
-              <div className="flex lg:flex-col justify-between  w-full lg:w-32 mt-3 lg:mt-0 items-end">
-                <Heart />
-                <span className="text-lg font-bold text-[#3d6ef4]">
-                  $1,150 / year
-                </span>
-              </div>
-            </div>
-          </section>
-          <section className="p-3 mt-3 lg:mt-0">
-            <div className="flex flex-wrap lg:justify-between justify-center  shadow-md rounded p-3 border border-slate-300">
-              <div className="flex items-center">
-                <Image src={Room} alt="" />
-              </div>
-              <div className="ml-5 text-[#515151] space-y-2">
-                <h1 className="text-xl font-semibold w-48">
-                  2 bedroom flat lorem
-                </h1>
-                <h5 className="w-44">Lara's avenue, Damico, Ile-ife</h5>
-                <h6 className="flex items-center">
-                  4.5 <Star size={15} />
-                </h6>
-                <h3 className="flex items-center">
-                  <ThumbsUp size={20} />
-                  1.1k <Share className="ml-3" size={20} />
-                  1.1k <MessageSquare className="ml-3" size={20} />
-                  1.1k{" "}
-                </h3>
-              </div>
-              <div className="flex lg:flex-col justify-between  w-full lg:w-32 mt-3 lg:mt-0 items-end">
-                <Heart />
-                <span className="text-lg font-bold text-[#3d6ef4]">
-                  $1,150 / year
-                </span>
-              </div>
-            </div>
-          </section>
-          <section className="p-3 mt-3 lg:mt-0">
-            <div className="flex flex-wrap lg:justify-between justify-center  shadow-md rounded p-3 border border-slate-300">
-              <div className="flex items-center">
-                <Image src={Room} alt="" />
-              </div>
-              <div className="ml-5 text-[#515151] space-y-2">
-                <h1 className="text-xl font-semibold w-48">
-                  2 bedroom flat lorem
-                </h1>
-                <h5 className="w-44">Lara's avenue, Damico, Ile-ife</h5>
-                <h6 className="flex items-center">
-                  4.5 <Star size={15} />
-                </h6>
-                <h3 className="flex items-center">
-                  <ThumbsUp size={20} />
-                  1.1k <Share className="ml-3" size={20} />
-                  1.1k <MessageSquare className="ml-3" size={20} />
-                  1.1k{" "}
-                </h3>
-              </div>
-              <div className="flex lg:flex-col justify-between  w-full lg:w-32 mt-3 lg:mt-0 items-end">
-                <Heart />
-                <span className="text-lg font-bold text-[#3d6ef4]">
-                  $1,150 / year
-                </span>
-              </div>
-            </div>
-          </section>
-
+        {homes.map((e)=>{
+            return(
+                <section key={e.id} className="p-3 mt-3 lg:mt-0 cursor-pointer" style={lato.style}>
+                    <div className="flex flex-wrap lg:justify-between justify-center  shadow-md rounded p-3 border border-slate-300">
+                        <div className="flex items-center">
+                        <Image src={Room} alt="" />
+                        </div>
+                        <div className="ml-5 text-[#515151] space-y-2">
+                        <h1 className="text-xl font-semibold w-48">{e.type}</h1>
+                        <h5 className="w-44">{e.location}</h5>
+                        <h6 className="flex items-center">{e.rating}<Star size={15} />
+                        </h6>
+                        <h3 className="flex items-center">
+                            <ThumbsUp size={20} />
+                            1.1k <Share className="ml-3" size={20} />
+                            1.1k <MessageSquare className="ml-3" size={20} />
+                            1.1k{" "}
+                        </h3>
+                        </div>
+                        <div className="flex lg:flex-col justify-between  w-full lg:w-32 mt-3 lg:mt-0 items-end">
+                        <Heart
+                            ref={show}
+                            onClick={ChangeColor}
+                            className="cursor-pointer"
+                        />
+                        <div ref={hide} className="text-lg w-6 hidden">
+                            <FontAwesomeIcon
+                            icon={faHeart}
+                            style={{ color: "#da1616" }}
+                            />
+                        </div>
+                        <span className="text-lg font-bold text-[#3d6ef4]">{e.price}</span>
+                        </div>
+                    </div>
+            </section>
+            )
+        })}
           <div></div>
         </section>
         <section className="lg:basis-[35%] shadow-md border border-slate-400 h-screen rounded-md">

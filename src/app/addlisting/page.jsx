@@ -33,7 +33,7 @@ export default function Page() {
             <div
             style={{width:270}}
             className="border border-slate-300 rounded">
-            <Link href="">
+            <Link href={"/addlisting/addlistingform"}>
             <div
             style={{height:170}}
             className="bg-[#E8EEFF] flex justify-center items-center cursor-pointer">
