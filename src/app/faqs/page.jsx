@@ -50,7 +50,7 @@ export default function faqs() {
             font-medium cursor-pointer p-3`}>
             <div className="flex p-3 hover:bg-blue-300 rounded-full">
             <Users2 />
-            <span className="w-52 ml-3 hidden md:block">Roomates</span>    
+            <span className="w-52 ml-3 hidden md:block">Room matching</span>    
             </div>
         </li> 
         <li className={

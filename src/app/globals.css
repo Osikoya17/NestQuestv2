@@ -5,3 +5,16 @@
 .bgImag{
   /* background-image: url('../public/footjpg2x.jpg'); */
 }
+
+body{
+  overflow-x: hidden;
+}
+:global {
+  @import 'node_modules/slick-carousel/slick/slick';
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+

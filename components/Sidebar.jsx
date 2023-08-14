@@ -13,7 +13,7 @@ export default function Sidebar() {
           <ul className="px-10">
             <li className={
             `flex items-center justify-center
-            font-medium cursor-pointer`}>
+            font-medium cursor-pointer p-5`}>
             <div className="flex p-3 hover:bg-blue-300 rounded-full">
             <LayoutDashboard className=""/>
             <span className="w-52 ml-3 hidden md:block">Dashboard</span>    
@@ -22,31 +22,7 @@ export default function Sidebar() {
         </li> 
         <li className={
             `flex items-center justify-center
-            font-medium cursor-pointer`}>
-            <div className="flex p-3 hover:bg-blue-300 rounded-full">
-            <ListMinus />
-            <span className="w-52 ml-3 hidden md:block">Listing</span>   
-            </div> 
-        </li> 
-        <li className={
-            `flex items-center justify-center
-            font-medium cursor-pointer`}>
-            <div className="flex p-3 hover:bg-blue-300 rounded-full">
-            <MessageSquare/>
-            <span className="w-52 ml-3 hidden md:block">Messaging</span>    
-            </div>
-        </li> 
-        <li className={
-            `flex items-center justify-center
-            font-medium cursor-pointer `}>
-            <div className="flex p-3 hover:bg-blue-300 rounded-full">
-            <Star />
-            <span className="w-52 ml-3 hidden md:block">Favourite</span>    
-            </div>
-        </li> 
-        <li className={
-            `flex items-center justify-center
-            font-medium cursor-pointer`}>
+            font-medium cursor-pointer p-5`}>
             <div className="flex p-3 hover:bg-blue-300 rounded-full">
             <Users2 />
             <span className="w-52 ml-3 hidden md:block">Roomates</span>    
