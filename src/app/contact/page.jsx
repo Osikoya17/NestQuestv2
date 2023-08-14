@@ -94,16 +94,28 @@ export default function contact() {
           </article>
         </div>
       </div>
-      <div id="Blue_Icon" className="absolute top-36 right-56 ">
+      <div
+        id="Blue_Icon"
+        className="invisible md:visible absolute top-36 right-56 "
+      >
         <SemiMediumBlackIcon />
       </div>
-      <div id="Blue_Icon" className="absolute bottom-80 right-96">
+      <div
+        id="Blue_Icon"
+        className="invisible md:visible absolute bottom-80 right-96"
+      >
         <SemiMediumBlueIcon />
       </div>
-      <div id="Blue_Icon" className="absolute bottom-6 left-10">
+      <div
+        id="Blue_Icon"
+        className="invisible md:visible absolute bottom-6 left-10"
+      >
         <SemiMediumGreyIcon />
       </div>
-      <div id="Blue_Icon" className="absolute top-6 right-96">
+      <div
+        id="Blue_Icon"
+        className="invisible md:visible absolute top-6 right-96"
+      >
         <SemiMediumBlueIcon />
       </div>
       <div id="button" className="flex mt-4 justify-center">

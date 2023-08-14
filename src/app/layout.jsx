@@ -13,13 +13,16 @@ import {
 import { Button } from "antd";
 import Link from "next/link";
 import Logo from "../../public/logo.svg";
-import { useRef, useState } from "react";
+import { useRef, useState, createContext } from "react";
 
 const raleway = Raleway({ subsets: ["latin"] });
+
+export const CarouselContext = createContext();
 
 export default function RootLayout({ children }) {
   const [user, setUser] = useState(false);
   const [expanded, setExpanded] = useState(false);
+  const [homes, setHomes] = useState(null);
 
   const toogleNav = () => {
     expanded ? setExpanded(false) : setExpanded(true);
@@ -87,10 +90,10 @@ export default function RootLayout({ children }) {
         </nav>
         {expanded && (
           <div className="w-full block lg:hidden absolute bg-white shadow-md z-50">
-            <Link href={"/home"}>
+            <Link href={"/"}>
               <h3 className="border flex text-center p-5">Home</h3>
             </Link>
-            <Link href={"/about-us"}>
+            <Link href={"/about"}>
               <h3 className="border flex text-center p-5">About Us</h3>
             </Link>
             <Link href={"/faqs"}>
@@ -150,7 +153,6 @@ export default function RootLayout({ children }) {
           <p className="text-center mt-10 text-white">
             2023 NestQuest Inc. All rights reserved.
           </p>
-          ssss
         </footer>
       </body>
     </html>

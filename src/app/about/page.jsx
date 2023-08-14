@@ -35,7 +35,7 @@ export default function about() {
             About Us
           </h3>
           <p
-            className="text-[#a2a2b3] font-normal text-md leading-[179.023%] text-center  md:text-start w-[55%] "
+            className="w-full text-[#a2a2b3] font-normal text-md leading-[179.023%] text-center  sm:w-[55%] md:text-start"
             style={raleway.style}
           >
             At NestQuest, we believe that finding the ideal student
@@ -202,14 +202,14 @@ export default function about() {
       {/* last section */}
       <section
         id="last_section"
-        className="flex flex-col gap-y-5 md:flex-row mt-24  gap-x-10  "
+        className="flex flex-col gap-y-5 mb-4 md:flex-row mt-24  gap-x-10  "
       >
         <article
           id="A"
           className="flex flex-grow-[2] max-w-56 p-6 min-h-56 rounded-2xl bg-[#376FFF]  flex-col gap-y-4 xs:w-96"
         >
           <div id="heading">
-            <h2 className="text-white">WHO WE ARE</h2>
+            <h2 className="text-white font-bold">WHO WE ARE</h2>
           </div>
           <div id="paragraph">
             <p className="text-sm  text-[#FFF] font-normal leading-[179%]">
@@ -242,5 +242,5 @@ export default function about() {
         </article>
       </section>
     </main>
-  )
-};
+  );
+}

@@ -11,7 +11,10 @@ const inter = Inter({
 
 export default function faqs() {
   return (
-    <main className="bg-[#F8F8F9] h-screen py-10" style={inter.style}>
+    <main
+      className="px-2 md:px-0 bg-[#F8F8F9] h-screen py-10"
+      style={inter.style}
+    >
       <section className="sm:px-4 flex justify-center mt-8">
         <div className="flex flex-col gap-y-6">
           <div
@@ -94,7 +97,7 @@ export default function faqs() {
           </div>
         </div>
       </section>
-      <section className=" sm:px-4 flex mt-8 justify-center">
+      <section className="mb-4 sm:px-4 flex mt-8 justify-center">
         <div
           id="searchbar"
           className=" shadow-lg border-3 min-h-24 p-6  grid grid-cols-2 bg-[#E8EEFF] md:flex gap-x-8 items-center"
