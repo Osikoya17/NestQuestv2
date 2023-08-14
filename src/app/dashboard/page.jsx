@@ -72,9 +72,7 @@ export default function Dashboard() {
           </section>
           <section className="flex px-3 text-lg font-light" style={lato.style}>
             <div className="flex justify-center bg-[#E8EEFF] rounded items-center">
-              {/* <Dropdown.Button>
-                    Submit
-                </Dropdown.Button> */}
+
             </div>
             <div className="flex justify-center items-center ml-2">
               <Star />
