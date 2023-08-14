@@ -1,10 +1,7 @@
 'use client'
 /* eslint-disable react/no-unescaped-entities */
 
-import {LayoutDashboard,
-    Users2, 
-    Headphones,
-    Settings,
+import { 
     ListMinus,
     Star,
     ThumbsUp,
@@ -23,7 +20,6 @@ import Maps from '../../../public/map.svg'
 import Room from '../../../public/room.svg'
 import { useRef } from 'react'
 import { Sidebar } from '@/components/Sidebar'
-import DropdownButton from 'antd/es/dropdown/dropdown-button'
 
 const lato = Lato({subsets:['latin'],weight:["400","700"]})
 const raleway = Raleway({subsets:['latin']})

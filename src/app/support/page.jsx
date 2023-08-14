@@ -17,7 +17,7 @@ import Link from "next/link"
 const lato = Lato({subsets:['latin'],weight:"700"})
 const raleway = Raleway({subsets:['latin']})
 
-export default function faqs() {
+export default function Page() {
   return (
     <main className="flex">
     <Sidebar/>
@@ -26,7 +26,7 @@ export default function faqs() {
         <h1 className="text-center text-3xl" style={raleway.style}>How can we help?</h1>
         <Input style={raleway.style} className="lg:w-[30rem] mt-7 text-lg text-slate-600" placeholder="Ask a question"/>
       </header>
-          <section className="lg:flex lg:p-10 p-3" style={raleway.style}>
+          {/* <section className="lg:flex lg:p-10 p-3" style={raleway.style}>
             <div className="lg:basis-[80%] w-full ">
               <h2 className="font-bold text-xl">FAQs</h2>
               <div className="border-t-2 border-slate-200 w-full mt-3 mb-7"></div>
@@ -93,7 +93,7 @@ export default function faqs() {
               <div className="flex justify-center items-center h-72 w-full basis-1/2 bg-slate-100 rounded">ADS</div>
               <div className="flex justify-center items-center h-36 mt-5 w-full basis-1/2 bg-slate-100 rounded">ADS</div>
             </section>
-          </section>
+          </section> */}
           
 
     </section>
