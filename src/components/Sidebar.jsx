@@ -6,16 +6,15 @@ import {usePathname} from 'next/navigation'
 
 
 
-
 const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 export function Sidebar() {
   const pathname = usePathname()
   return (
     <aside
       id="sidenav"
-      className="basis-[16%] font-semibold border-r-2 sticky top-16 border-slate-300 min-h-screen shadow-sm"
+      className="basis-[16%] font-semibold border-r-2  border-slate-300 min-h-screen shadow-sm"
     >
-      <nav className="">
+      <nav className="sticky left-0 top-16">
         <ul className="font-semibold " style={lato.style}>
           {paths.map((e)=>{
             return(
