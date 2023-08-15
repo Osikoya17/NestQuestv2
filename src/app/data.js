@@ -20,5 +20,26 @@ export const homes = [
     type: "2 bedroom flat",
     rating: 4.5
   },
+  {
+    id: 4,
+    location: "Damico, Ile-ife,Osun",
+    price: "$1250/year",
+    type: "2 bedroom flat",
+    rating: 4.5
+  },
+  {
+    id: 5,
+    location: "Damico, Ile-ife,Osun",
+    price: "$1250/year",
+    type: "2 bedroom flat",
+    rating: 4.5
+  },
+  {
+    id: 6,
+    location: "Damico, Ile-ife,Osun",
+    price: "$1250/year",
+    type: "2 bedroom flat",
+    rating: 4.5
+  },
 ];
 

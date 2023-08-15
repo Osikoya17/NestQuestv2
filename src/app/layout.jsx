@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body style={raleway.style} >
-        <nav className='flex flex-row justify-between bg-white z-50 shadow-sm w-full h-16 p-5 sticky top-0'>
+        <nav className='flex flex-row justify-between bg-white z-50 w-full h-16 p-5 sticky top-0'>
           <div className="lg:basis-1/4 flex justify-center items-center text-sm ">
            <Button onClick={toogleNav} className='flex items-center justify-center border-none lg:hidden'>{expanded? <X size={30} /> : <AlignJustify size={30} />}</Button>
             <Image
@@ -58,8 +58,8 @@ export default function RootLayout({ children }) {
           }
           {!user &&
           <div className="basis-1/4 flex items-center justify-center">
-          <Link href={"/login"} ><Button type='text' className='text-sm h-8' style={raleway.style}>Sign In</Button></Link>
-          <Link href={"/signup"} ><Button type='primary' className='bg-[#0042EC] border-none text-sm ml-2 h-8 text-white' style={raleway.style}>Sign Up</Button></Link>
+          <Link href={"/login"} ><Button type='text' className='text-sm h-8 font-semibold' style={raleway.style}>Sign In</Button></Link>
+          <Link href={"/signup"} ><Button type='primary' className='bg-[#0042EC] border-none text-xs font-semibold ml-2 h-8 text-white' style={raleway.style}>Sign Up</Button></Link>
         </div>
         }
         </nav>

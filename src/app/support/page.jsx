@@ -1,14 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import {Sidebar} from "@/components/Sidebar"
-import {LayoutDashboard,
-  CreditCard,
-  Search,
-  Users2, 
-  User2,
-  Headphones,
-  Settings,
-  Rocket
-} from 'lucide-react'
 import {Lato, Raleway} from 'next/font/google'
 import {Button, Input} from 'antd'
 import Link from "next/link"
