@@ -45,9 +45,9 @@ export default function ContactCArd({img,Name,Details,Numbers,email,age}){
                 <button className=' flex items-center w-[30px] px-[5px] rounded-lg bg-[#E8EEFF] fill-white'><Phone color='#376FFF' /></button>
             </div>
             <div className='flex gap-[50px]'>
-                <button><a href=""><img className='w-[22px]' src={'/WhatsApp svg.png'} alt="" /></a></button>
-                <button><a href=""><img className='w-[22px]' src={'/Facebook svg.png'} alt="" /></a></button>
-                <button><a href=""><img className='w-[22px]' src={'/instagram svg.png'} alt="" /></a></button>
+                <button><a href=""><Image width={22} height={20} src={'/WhatsApp svg.png'} alt="" /></a></button>
+                <button><a href=""><Image width={22} height={20} src={'/Facebook svg.png'} alt="" /></a></button>
+                <button><a href=""><Image width={22} height={20} src={'/instagram svg.png'} alt="" /></a></button>
             </div>
         </div>
         <div className='flex flex-col text-left gap-[10px] w-full px-[20px] '>
