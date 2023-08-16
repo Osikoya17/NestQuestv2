@@ -27,11 +27,12 @@ import { comments } from './comment';
 const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 const raleway = Raleway({ subsets: ["latin"] });
 export default function Dashboard() {
-  const [like,setLike] = useState(true);
+  const [color,setColor] = useState("grey");
   const [starNo,setStartNo] =useState(0)
   const overlay = useRef()
   const [visible , setVisible] = useState(false)
-  const ChangeColor = (f) => {
+  const ChangeColor = (id) => {
+    color == "grey" ? setColor("red") : setColor('grey')
     
     // if (id.current.style.color = "#909090"){
     //   id.current.style.color = "red"
@@ -206,9 +207,9 @@ export default function Dashboard() {
                           <div className="flex lg:flex-col justify-between  w-full lg:w-32 mt-3 lg:mt-0 items-end">
                           <FontAwesomeIcon
                               icon={faHeart}
-                              style={{ color: "#909090" }} 
+                              style={{ color: `${color}` }} 
                               // ref={like}
-                              onClick={(id)=>setLike()} 
+                              onClick={()=>ChangeColor(e.id)} 
                           />
 
                           {/* <div ref={hide} style={{display:"none"}} className="text-lg w-6">
