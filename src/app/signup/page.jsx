@@ -1,42 +1,90 @@
 "use client"
-import { Button, Checkbox, Input } from "antd";
+import { Button, Checkbox, Input,notification } from "antd";
 import {Lato} from "next/font/google";
 import Link from 'next/link'
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 
 
 const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 export default function Signup() {
+  const url = "https://nest-quest.onrender.com"
   const [landlord, setLandlord] = useState(false)
+  const [ comments, setComments ] = useState([])
+  const [email,setEmail] = useState('')
+  const [password,setPassword] = useState('')
+  const [firstname,setFirstname] = useState('')
+  const [lastname,setLastname] = useState('')
+  const [error, setError]= useState(false)
+  const [api, contextHolder] = notification.useNotification();
+  useEffect(() => {
+    const getUsers= async()=>{
+      const response = await fetch(`${url}/user/`);
+      const comments =  await response.json();
+      setComments ( comments )
+    }
+    getUsers()
+  }, [])
+  console.log(comments);
+  
   const createLandlord = () =>{
     !landlord?setLandlord(true):""
   }
   const createStudent = () =>{
     landlord?setLandlord(false):"";
   }
-  const createUser = ()=>{
-    
+  const createUser = async()=>{
+    if(firstname == "" || lastname=="" || email =="" || password == ""){
+      api["error"]({
+        message: 'Error',
+        description:
+          'Please Fill all The Field Provided',
+      });
+    }else{
+      await fetch (`${url}/signup/`,{
+        method:'POST',
+        body: JSON.stringify({
+          username:firstname,
+          email:email,
+          password1:password,
+          password2:password
+        }),
+        headers:{
+          'Content-Type' : 'application/json'
+        }
+      })
+    }
   }
   return (
     <main
       style={lato.style}
       className="flex items-center mb-10 p-10 lg:pt-10 flex-col"
     >
+      {contextHolder}
       <h4 className="mt-2 text-xl font-bold text-[#343434]">
         Create an account{" "}
       </h4>
       <section className="w-full  mt-5 flex flex-col font-medium shadow-lg p-4 lg:w-[40%] border border-slate-100">
         <div className="p-2">
-          <label htmlFor="fullname" className="text-sm text-[#353535]">
-            Fullname
+          <label htmlFor="firstname" className="text-sm text-[#353535]">
+            Firstname
           </label>
-          <Input className="h-8" name="fullname" placeholder="Firstname, Lastname" />
+          <Input className="h-8" name="firstname" value={firstname} onChange={(r)=>setFirstname(r.target.value)} />
+        </div>
+        <div className="p-2">
+          <label htmlFor="lastname" className="text-sm text-[#353535]">
+            Lastname
+          </label>
+          <Input className="h-8" name="lastname" value={lastname} onChange={(g)=>setLastname(g.target.value)}/>
         </div>
         <div className="p-2 mt-3">
           <label htmlFor="email" className="text-sm text-[#353535]">
             Email address
           </label>
-          <Input className="h-8" name="email" />
+          <Input 
+          className="h-8" 
+          name="email"
+          value={email}
+          onChange={(e)=>setEmail(e.target.value)}/>
         </div>
         {landlord && (
           <div className="p-2">
@@ -58,13 +106,21 @@ export default function Signup() {
           <label htmlFor="password" className="text-sm text-[#353535]">
             Password
           </label>
-          <Input className="h-8" name="password" label="Fullname" />
+          <Input className="h-8" 
+          name="password" 
+          label="Fullname"
+          value={password}
+          onChange={(f)=>setPassword(f.target.value)} />
         </div>
         <div className="p-2 mt-3">
           <label htmlFor="password" className="text-sm text-[#353535]">
             Confirm Password 
           </label>
-          <Input className="h-8" name="password" label="Fullname" />
+          <Input className="h-8" 
+          name="password" 
+          label="Fullname"
+          value={password}
+          onChange={(q)=>setPassword(q.target.value)} />
         </div>
         <div className="flex justify-between  p-2 mt-3">
           <Button
@@ -89,7 +145,7 @@ export default function Signup() {
           type="primary"
           className="mt-4 h-10 bg-[#0042EC] border-none text-sm ml-2 text-white"
           style={lato.style}
-          
+          onClick={createUser}
         >
           Sign Up
         </Button>

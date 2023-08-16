@@ -6,6 +6,8 @@ import { Inter } from "next/font/google";
 import { PlusIcon } from "lucide-react";
 import { BigSearchIcon } from "../utils/util_icon";
 
+const inter = Inter({subsets:['latin']})
+
 export default function faqs() {
   return (
     <main
