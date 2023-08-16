@@ -13,7 +13,7 @@ import {
 import { Button } from "antd";
 import Link from "next/link";
 import Logo from "../../public/logo.svg";
-import { useRef, useState, createContext } from "react";
+import {useState, createContext } from "react";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -22,7 +22,6 @@ export const CarouselContext = createContext();
 export default function RootLayout({ children }) {
   const [user, setUser] = useState(false);
   const [expanded, setExpanded] = useState(false);
-  const [homes, setHomes] = useState(null);
 
   const toogleNav = () => {
     expanded ? setExpanded(false) : setExpanded(true);
@@ -30,80 +29,47 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body style={raleway.style}>
-        <nav className="flex flex-row justify-between bg-white z-50 shadow-sm w-full h-16 p-5 sticky top-0">
-          <div className="lg:basis-1/4 flex justify-center text-sm ">
-            <Button
-              onClick={toogleNav}
-              className="flex items-center justify-start border-none lg:hidden"
-            >
-              {expanded ? <X size={30} /> : <AlignJustify size={30} />}
-            </Button>
-            <Image src={Logo} alt="" />
+      <body style={raleway.style} >
+        <nav className='flex flex-row justify-between bg-white z-50 w-full h-16 p-5 sticky top-0'>
+          <div className="lg:basis-1/4 flex justify-center items-center text-sm ">
+           <Button onClick={toogleNav} className='flex items-center justify-center border-none lg:hidden'>{expanded? <X size={30} /> : <AlignJustify size={30} />}</Button>
+            <Image
+            src={Logo}
+            alt=''
+            width={120}
+            height={120}
+            />
           </div>
-          <div className=" hidden basis-1/2 md:flex font-medium  justify-evenly ">
-            <Link href={"/"}>
-              <h6 className="text-sm font-bold border-b-2 border-black text-black cursor-pointer ">
-                Home
-              </h6>
-            </Link>
-            <Link href={"about"}>
-              <h6 className="text-sm cursor-pointer">About Us</h6>
-            </Link>
-            <Link href={"/faqs"}>
-              <h6 className="text-sm cursor-pointer">FAQs</h6>
-            </Link>
-            <Link href={"/contact"}>
-              <h6 className="text-sm cursor-pointer">Contact Us</h6>
-            </Link>
+          <div className=" hidden basis-1/2 md:flex font-medium   justify-evenly " >
+            <h6 className='text-sm font-bold border-b-2 border-black text-black cursor-pointer '>Home</h6>
+            <h6 className='text-sm cursor-pointer'>About Us</h6>
+            <Link href={"/support "} ><h6 className='text-sm cursor-pointer'>FAQs</h6></Link>
+            <h6 className='text-sm cursor-pointer'>Contact Us</h6>
           </div>
-          {user && (
-            <div className="basis-1/4 flex mb-5 justify-center">
-              <div className="leading-2">
-                <h1 className="font-semibold">John Doe</h1>
-                <p className="text-sm text-right -mt-2">Student</p>
-              </div>
-              <div className="bg-slate-200 rounded-full w-8 h-8 ml-1">
-                {/* <Image
-              /> */}
-              </div>
+          {user && 
+          <div className='basis-1/4 flex items-center justify-center'>
+            <div className='h-8'>
+              <h1 className='font-semibold'>John Doe</h1>
+              <p className='text-sm text-right -mt-2'>Student</p>
             </div>
-          )}
-          {!user && (
-            <div className="basis-1/4 flex justify-center">
-              <Link href={"/login"}>
-                <Button type="text" className="text-sm" style={raleway.style}>
-                  Sign In
-                </Button>
-              </Link>
-              <Link href={"/signup"}>
-                <Button
-                  type="primary"
-                  className="bg-[#0042EC] border-none text-sm ml-2 h-8 text-white"
-                  style={raleway.style}
-                >
-                  Sign Up
-                </Button>
-              </Link>
+            <div className='bg-slate-200 rounded-full w-8 h-8 ml-1'>
             </div>
-          )}
+          </div>
+          }
+          {!user &&
+          <div className="basis-1/4 flex items-center justify-center">
+          <Link href={"/login"} ><Button type='text' className='text-sm h-8 font-semibold' style={raleway.style}>Sign In</Button></Link>
+          <Link href={"/signup"} ><Button type='primary' className='bg-[#0042EC] border-none text-xs font-semibold ml-2 h-8 text-white' style={raleway.style}>Sign Up</Button></Link>
+        </div>
+        }
         </nav>
-        {expanded && (
-          <div className="w-full block lg:hidden absolute bg-white shadow-md z-50">
-            <Link href={"/"}>
-              <h3 className="border flex text-center p-5">Home</h3>
-            </Link>
-            <Link href={"/about"}>
-              <h3 className="border flex text-center p-5">About Us</h3>
-            </Link>
-            <Link href={"/faqs"}>
-              <h3 className="border flex text-center p-5">FAQs</h3>
-            </Link>
-            <Link href={"/contact"}>
-              <h3 className="border flex text-center p-5">Contact Us</h3>
-            </Link>
-          </div>
-        )}
+        {expanded && 
+            <div className='w-full block lg:hidden absolute bg-white shadow-md z-50'>
+              <Link href={"/home"}><h3 className='border flex text-center p-5'>Home</h3></Link>
+              <Link href={"/about-us"}><h3 className='border flex text-center p-5'>About Us</h3></Link>
+              <Link href={"/faqs"}><h3 className='border flex text-center p-5'>FAQs</h3></Link>
+              <Link href={"/contact"}><h3 className='border flex text-center p-5'>Contact Us</h3></Link>
+            </div>}
         {children}
         <footer className="bg-[#1080cf] relative w-full" style={raleway.style}>
           {/* DESKTOP */}

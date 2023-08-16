@@ -3,10 +3,8 @@ import { Lato } from "next/font/google";
 import Image from "next/legacy/image";
 
 import { CiLocationOn } from "react-icons/ci";
-
 import { AiOutlineStar } from "react-icons/ai";
 import { IoIosArrowDropright, IoIosArrowDropleft, Io } from "react-icons/io";
-
 import {
   HomeIcon,
   SearchIcon,
