@@ -5,3 +5,12 @@
 .bgImag{
   /* background-image: url('../public/footjpg2x.jpg'); */
 }
+
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.contact::-webkit-scrollbar {
+  display: none;
+}

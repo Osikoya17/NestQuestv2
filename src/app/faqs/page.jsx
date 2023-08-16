@@ -1,77 +1,125 @@
-import Sidebar from "../../../components/Sidebar"
-import {LayoutDashboard, 
-  ListMinus, 
-  MessageSquare,
-  Star, 
-  Users2, 
-  Headphones,
-  Settings
-} from 'lucide-react'
+import React from "react";
+import { Button } from "antd";
+import { Inter } from "next/font/google";
+// import { PlusIcon } from "../components/icon";
+import { PlusIcon } from "lucide-react";
+import { BigSearchIcon } from "../utils/util_icon";
+
+const inter = Inter({
+  subsets: ["latin"],
+});
+
 export default function faqs() {
   return (
-    <main className="flex">
-      <aside className="lg:basis-1/4 basis-1/5  min-h-screen shadow-lg">
-        <nav className=" border-slate-300">
-          <ul className="px-10">
-            <li className={
-            `flex items-center justify-center
-            font-medium cursor-pointer p-3`}>
-            <div className="flex p-3 hover:bg-blue-300 rounded-full">
-            <LayoutDashboard className=""/>
-            <span className="w-52 ml-3 hidden md:block">Dashboard</span>    
+    <main
+      className="px-2 md:px-0 bg-[#F8F8F9] h-screen py-10"
+      style={inter.style}
+    >
+      <section className="sm:px-4 flex justify-center mt-8">
+        <div className="flex flex-col gap-y-6">
+          <div
+            id="A"
+            className="border-8 border-white shadow-lg  bg-[#FFFFFF] "
+          >
+            <div id="content" className="flex gap-x-6">
+              <div id="icon">
+                <span>
+                  <PlusIcon className="fill-[#376FFF]" />
+                </span>
+              </div>
+              <p>How do i get started with NestQuest?</p>
             </div>
-        </li> 
-        <li className={
-            `flex items-center justify-center
-            font-medium cursor-pointer p-3`}>
-            <div className="flex p-3 hover:bg-blue-300 rounded-full">
-            <ListMinus />
-            <span className="w-52 ml-3 hidden md:block">Listing</span>   
-            </div> 
-        </li> 
-        <li className={
-            `flex items-center justify-center
-            font-medium cursor-pointer p-3`}>
-            <div className="flex p-3 hover:bg-blue-300 rounded-full">
-            <MessageSquare/>
-            <span className="w-52 ml-3 hidden md:block">Messaging</span>    
+          </div>
+          <div
+            id="A"
+            className="border-8 border-white shadow-lg  bg-[#FFFFFF] "
+          >
+            <div id="content" className="flex gap-x-6">
+              <div id="icon">
+                <span>
+                  <PlusIcon className="fill-[#376FFF]" />
+                </span>
+              </div>
+              <p>How do i get started with NestQuest?</p>
             </div>
-        </li> 
-        <li className={
-            `flex items-center justify-center
-            font-medium cursor-pointer p-3`}>
-            <div className="flex p-3 hover:bg-blue-300 rounded-full">
-            <Star />
-            <span className="w-52 ml-3 hidden md:block">Favourite</span>    
+          </div>
+          <div
+            id="A"
+            className="border-8 border-white shadow-lg  bg-[#FFFFFF] "
+          >
+            <div id="content" className="flex gap-x-6">
+              <div id="icon">
+                <span>
+                  <PlusIcon className="fill-[#376FFF]" />
+                </span>
+              </div>
+              <p>How does NestQuest&apos;s roommate matching work?</p>
             </div>
-        </li> 
-        <li className={
-            `flex items-center justify-center
-            font-medium cursor-pointer p-3`}>
-            <div className="flex p-3 hover:bg-blue-300 rounded-full">
-            <Users2 />
-            <span className="w-52 ml-3 hidden md:block">Roomates</span>    
+          </div>
+          <div
+            id="A"
+            className="border-8 border-white shadow-lg  bg-[#FFFFFF] "
+          >
+            <div id="content" className="flex gap-x-6">
+              <div id="icon">
+                <span>
+                  <PlusIcon className="fill-[#376FFF]" />
+                </span>
+              </div>
+              <p>Is NestQuest safe and secure for transactions ?</p>
             </div>
-        </li> 
-        <li className={
-            `flex items-center justify-center
-            font-medium cursor-pointer p-3`}>
-            <div className="flex p-3 hover:bg-blue-300 rounded-full">
-            <Headphones />
-            <span className="w-52 ml-3 hidden md:block">Customer Support</span>    
+          </div>
+          <div
+            id="A"
+            className="border-8 border-white shadow-lg  bg-[#FFFFFF] "
+          >
+            <div id="content" className="flex gap-x-6">
+              <div id="icon">
+                <span>
+                  <PlusIcon className="fill-[#376FF]" />
+                </span>
+              </div>
+              <p>Can i communicate with landlord directly on NestQuest?</p>
             </div>
-        </li> 
-        <li className={
-            `flex items-center justify-center
-            font-medium cursor-pointer p-3`}>
-            <div className="flex p-3 hover:bg-blue-300 rounded-full">
-            <Settings />
-            <span className="w-52 ml-3 hidden md:block">Setting</span>
+          </div>
+          <div
+            id="A"
+            className="border-8 border-white shadow-lg  bg-[#FFFFFF] "
+          >
+            <div id="content" className="flex gap-x-6">
+              <div id="icon">
+                <span>
+                  <PlusIcon />
+                </span>
+              </div>
+              <p>What if I encounter issues with app or have questions ?</p>
             </div>
-        </li> 
-        </ul> 
-        </nav>
-    </aside>
+          </div>
+        </div>
+      </section>
+      <section className="mb-4 sm:px-4 flex mt-8 justify-center">
+        <div
+          id="searchbar"
+          className=" shadow-lg border-3 min-h-24 p-6  grid grid-cols-2 bg-[#E8EEFF] md:flex gap-x-8 items-center"
+        >
+          <div id="searchIcon">
+            <BigSearchIcon />
+          </div>
+          <div
+            id="content"
+            className="flex flex-col gap-y-3 md:flex-col md:gap-y-0"
+          >
+            <h4>Cant find what you are looking for?</h4>
+            <p className="text-[#898989]">
+              Get articles to get up and running quick and easy
+            </p>
+          </div>
+
+          <Button className="ml-48 mt-3 bg-[#E8EEFF] flex justify-center w-40  border-[#376FFF] rounded-lg h-10 items-center text-[#376FFF] md:ml-0  lg:mt-0 ">
+            Write Us
+          </Button>
+        </div>
+      </section>
     </main>
-  )
+  );
 }
