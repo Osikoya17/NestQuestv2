@@ -21,7 +21,7 @@ export default function Login() {
       api["error"]({
         message: 'Error',
         description:
-          'Please Fill all The Field Provided',
+          'Please fill all the fields provided',
       });
     }else{
       await fetch (`${url}/login/`,{
