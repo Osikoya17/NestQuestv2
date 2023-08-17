@@ -30,6 +30,9 @@ export default function Roomm(){
 
         <main className="flex">
         <Sidebar />
+        <div className="flex gap-[20px] space-y-1 m-30 flex-col my-[10px] w-1/2">
+            <div className="px-8 py-4 bg-[#E8EEFF] font-medium ">Room Matching</div>
+            <div className="">
         <div className="flex gap-[20px] space-y-1 m-30 flex-col my-[10px] w-[650px]">
             <div className=" w-full px-8 py-4 bg-[#E8EEFF] font-medium ">Room Matching</div>
             <div>
@@ -42,6 +45,10 @@ export default function Roomm(){
             </div>
             <div>
                 {/* lower list */}
+                <Rmlist />      
+            </div>
+        </div>
+        <div className="contact basis-1/3 h-[570px] border-2 mx-[10px] my-[10px] sm:flex overflow-x-hidden">   
                 <Rmlist />  
             </div>
         </div>
