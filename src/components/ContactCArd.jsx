@@ -19,7 +19,7 @@ import {LayoutDashboard,
 export default function ContactCArd({img,Name,Details,Numbers,email,age}){
     return(
 
-        <div className="flex flex-col w-full h-[600px] items-center gap-[40px]   p-[10px]">
+        <div className="flex flex-col w-full h-[600px] items-center gap-[40px] p-[10px]">
         <div>
             
         </div>

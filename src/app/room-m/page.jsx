@@ -30,9 +30,9 @@ export default function Roomm(){
 
         <main className="flex">
         <Sidebar />
-        <div className="flex gap-[20px] space-y-1 m-30 flex-col my-[10px] w-[650px]">
-            <div className=" w-full px-8 py-4 bg-[#E8EEFF] font-medium ">Room Matching</div>
-            <div>
+        <div className="flex gap-[20px] space-y-1 m-30 flex-col my-[10px] w-1/2">
+            <div className="px-8 py-4 bg-[#E8EEFF] font-medium ">Room Matching</div>
+            <div className="">
                 <Mysilder />
             </div>
             <div>
@@ -42,10 +42,10 @@ export default function Roomm(){
             </div>
             <div>
                 {/* lower list */}
-                <Rmlist />  
+                <Rmlist />      
             </div>
         </div>
-        <div className="className='hidden contact w-[390px] h-[570px] border-2 mx-[10px] my-[10px] sm:flex overflow-x-hidden">   
+        <div className="contact basis-1/3 h-[570px] border-2 mx-[10px] my-[10px] sm:flex overflow-x-hidden">   
         <ContactCArd Name='Omotola Bolaji Adeyemi' img='/lady.svg' Details='I am 200level Student of Obafemi Awolowo University, I am studying Computer Science and Engineering' Numbers='0908855774532'email='@gmail.com' />
         </div>
         </main>

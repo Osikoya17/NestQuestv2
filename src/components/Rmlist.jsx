@@ -31,7 +31,7 @@ import {LayoutDashboard,
 
   const items = [
     {
-      label: 'School',
+      label: 'Apartment',
       key: '1',
     },
 
@@ -40,17 +40,17 @@ import {LayoutDashboard,
     },
 
     {
-        label: 'OAU',
+        label: 'Room type',
         key: '2',
     },
 
 
     {
-      label: 'OUI',
+      label: 'Self Con',
       key: '3',
     },
     {
-      label: 'UNILAG',
+      label: 'Bedroom Flats',
       key: '4',
     },
   ];
@@ -61,7 +61,7 @@ import {LayoutDashboard,
 
   const level = [
     {
-      label: 'level',
+      label: 'Budget',
       key: '1',
     },
 
@@ -70,34 +70,26 @@ import {LayoutDashboard,
     },
 
     {
-        label: '100 Level',
+        label: '40k-70k',
         key: '2',
     },
 
     {
-      label: '200 Level',
+      label: '70k-120',
       key: '3',
     },
 
     {
-      label: '300 Level',
+      label: '120k above',
       key: '4',
     },
 
-    {
-        label: '400 Level',
-        key: '5',
-    },
 
-    {
-        label: 'Final Year',
-        key: '6',
-    },
   ];
 
   const area = [
     {
-      label: 'Location',
+      label: 'Religion',
       key: '1',
     },
 
@@ -106,29 +98,16 @@ import {LayoutDashboard,
     },
 
     {
-        label: 'ife',
+        label: 'Chritain',
         key: '2',
     },
 
     {
-      label: 'osogbo',
+      label: 'Muslim',
       key: '3',
     },
 
-    {
-      label: 'lagos',
-      key: '4',
-    },
 
-    {
-        label: 'ilesha',
-        key: '5',
-    },
-
-    {
-        label: 'ibadan',
-        key: '6',
-    },
   ];
 
   const Filter= [
@@ -142,12 +121,12 @@ import {LayoutDashboard,
     },
 
     {
-        label: 'School',
+        label: 'Apartment',
         key: '2',
     },
 
     {
-      label: 'Level',
+      label: 'Budget',
       key: '3',
     },
 
@@ -283,7 +262,7 @@ export default function Rmlist({searchParams,}) {
 
      
         <div className='px-4 py-4'>
-            <div className='flex justify-between'>
+            <div className='hidden sm:flex justify-between'>
                 <div className=' flex gap-3'>
                     <div>
                     <Dropdown

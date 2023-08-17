@@ -28,7 +28,7 @@ const scrollRight = () => {
 export default function Mysilder(){
     return(
 
-        <div className='w-[650px] gap-[30px] m-0'>
+        <div className='gap-[30px] m-0'>
             <div className='flex flex-row justify-between px-4'>
                 <div className='font-medium text-xl'>Recommended Roommates</div>
                 <div className='flex items-center gap-2'>
