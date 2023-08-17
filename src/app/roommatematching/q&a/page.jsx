@@ -91,6 +91,8 @@ export default function Roomq(){
             <Sidebar />
         <div className={`flex gap-[20px] space-y-1 m-30 flex-col my-[10px] w-[70%] px-[0px]` }>
 
+
+
             <div className="flex items-center justify-between p-[20px] h-[180px] bg-[#E8EEFF]">
                 <div className="flex flex-col text-black">
                     <h2 className="text-[23px] font-semibold">Unlock Your Ideal Roomates</h2>
@@ -191,6 +193,7 @@ export default function Roomq(){
 
         </div>
         <div className='hidden contact basis-1/3 h-[570px] border-2 mx-[10px] my-[10px] sm:flex overflow-x-hidden'>
+
             <ContactCArd Name='Omotola Bolaji Adeyemi' img='/lady.svg' Details='I am 200level Student of Obafemi Awolowo University, I am studying Computer Science and Engineering' Numbers='0908855774532'email='@gmail.com' />
         </div>
 

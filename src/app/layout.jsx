@@ -14,14 +14,26 @@ import { Button } from "antd";
 import Link from "next/link";
 import Logo from "../../public/logo.svg";
 import {useState, createContext } from "react";
+import {SessionProvider, useSession} from 'next-auth/react'
+
 
 const raleway = Raleway({ subsets: ["latin"] });
 
 export const CarouselContext = createContext();
 
 export default function RootLayout({ children }) {
+    // const {data} = useSession()
+    // console.log(data);
+  // if( session && session.user){
+  //   <div>
+  //     <p>{session.user.name}</p>
+  //     <Button onClick={()=>signOut()}></Button>
+  //   </div>
+
+  // }
   const [user, setUser] = useState(false);
   const [expanded, setExpanded] = useState(false);
+
 
   const toogleNav = () => {
     expanded ? setExpanded(false) : setExpanded(true);
@@ -30,6 +42,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body style={raleway.style} >
+        
         <nav className='flex flex-row justify-between bg-white z-50 w-full h-16 p-5 sticky top-0'>
           <div className="lg:basis-1/4 flex justify-center items-center text-sm ">
            <Button onClick={toogleNav} className='flex items-center justify-center border-none lg:hidden'>{expanded? <X size={30} /> : <AlignJustify size={30} />}</Button>

@@ -2,6 +2,7 @@
 import { Button, Checkbox, Input,notification } from "antd";
 import {Lato} from "next/font/google";
 import Link from 'next/link'
+import { useRouter } from "next/navigation";
 import {useState,useEffect} from 'react'
 
 
@@ -15,6 +16,7 @@ export default function Signup() {
   const [firstname,setFirstname] = useState('')
   const [lastname,setLastname] = useState('')
   const [error, setError]= useState(false)
+  const router = useRouter();
   const [api, contextHolder] = notification.useNotification();
   useEffect(() => {
     const getUsers= async()=>{
@@ -39,21 +41,40 @@ export default function Signup() {
         description:
           'Please fill all the fields provided',
       });
-    }else{
-      await fetch (`${url}/signup/`,{
-        method:'POST',
-        body: JSON.stringify({
-          username:firstname,
-          email:email,
-          password1:password,
-          password2:password
-        }),
-        headers:{
-          'Content-Type' : 'application/json'
-        }
-      })
     }
-  }
+    else{
+      const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+      // Add the new user to the existing array
+      const newUser = {         
+        firstname:firstname,
+        lastname:lastname,
+        email: email,
+        password:password};
+      existingUsers.push(newUser);
+  
+      // Save the updated array back to localStorage
+      localStorage.setItem('users', JSON.stringify(existingUsers));
+      api["success"]({
+        message: 'Success',
+        description:
+          'User Created sucessfully',
+      })
+      router.push('/dashboard')
+    }}
+    //   await fetch (`${url}/signup/`,{
+    //     method:'POST',
+    //     body: JSON.stringify({
+    //       username:firstname,
+    //       email:email,
+    //       password1:password,
+    //       password2:password
+    //     }),
+    //     headers:{
+    //       'Content-Type' : 'application/json'
+    //     }
+    //   })
+    // }
   return (
     <main
       style={lato.style}
@@ -107,6 +128,7 @@ export default function Signup() {
             Password
           </label>
           <Input className="h-8" 
+          type="password"
           name="password" 
           label="Fullname"
           value={password}
@@ -117,6 +139,7 @@ export default function Signup() {
             Confirm Password 
           </label>
           <Input className="h-8" 
+          type="password"
           name="password" 
           label="Fullname"
           value={password}
