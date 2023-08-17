@@ -1,4 +1,6 @@
 'use client'
+
+import React from "react";
 import { Sidebar } from "@/components/Sidebar";
 import {Lato, Raleway} from 'next/font/google'
 import Image from "next/legacy/image"
@@ -10,11 +12,11 @@ import { Divider, Dropdown } from 'antd';
 import { Button,Checkbox, } from 'antd';
 import { ChevronDown, ChevronRight } from "lucide-react";
 
-
+import axios from "axios";
 import { InboxOutlined } from "@mui/icons-material";
 import { message, Upload } from 'antd';
 import { Input } from 'antd';
-import React from 'react';
+
 import { Radio } from 'antd';
 import { Select,Space } from "antd";
 
@@ -68,6 +70,58 @@ const onChange = (e)=>{
   console.log('radio checked',e.target.value);
   setvalue(e.target.value)    
 }
+
+
+// for backend data
+
+const url="https://nest-quest.onrender.com/api/docs/#/listings/listings_new_create"
+
+const [data,setdata]=useState({
+      rating:'0',
+      name:'',
+      description:'',
+      rent:0,
+      address:'',
+      type: value,
+      sum_ratings: 0,
+      total_ratings:0,
+})
+
+
+function handle(e){
+    
+    const newdata={...data}
+    newdata[e.target.id]= e.target.value
+    setdata(newdata)
+    console.log(newdata)
+    
+}
+
+function Submit(e) {
+  e.preventDefault();
+  axios.post(url,{
+    name: data.name,
+    rating: data.rating,
+    description:data.description,
+    address:data.address,
+    type:value,
+    rent:data.rent,
+    sum_ratings:data.sum_ratings,
+    total_ratings:data.total_ratings
+  })
+  .then(res=>{
+    console.log(res.data)
+  })
+}
+
+
+
+
+
+
+
+
+
 
 
 // for dropdowns
@@ -136,27 +190,38 @@ const items = [
                         </div>
                         <div className="flex flex-col gap-[10px]">
                           <h3 className="text-[14px] font-light">Property Type</h3>
-                         <Select  placeholder='Select' style={{width:400,}}onChange={handleChange}
+                         <Select placeholder='Select' value={value} style={{width:400,}}  onChange={handleChange}
                             options={[
                             {
-                              value: 'jack',
-                              label: 'Jack',
+                              value: 'SINGLE_ROOM',
+                              label: 'SINGLE_ROOM',
                             },
                             {
-                              value: 'lucy',
-                              label: 'Lucy',
+                              value: 'SELF_CON',
+                              label: 'SELF_CON',
                             },
                             {
-                              value: 'Yiminghe',
-                              label: 'yiminghe',
+                              value: 'ONE_BEDROOM_FLAT',
+                              label: 'ONE_BEDROOM_FLAT',
                             },
-                            
+                            {
+                              value: 'TWO_BEDROOMS_FLAT',
+                              label: 'TWO_BEDROOMS_FLAT',
+                            },
+                            {
+                              value: 'THREE_BEDROOMS_FLAT',
+                              label: 'THREE_BEDROOMS_FLAT',
+                            },
+                            {
+                              value: 'FOUR_BEDROOMS_FLAT',
+                              label: 'FOUR_BEDROOMS_FLAT',
+                            },
                            ]}
                           />
                         </div>
                         <div>
                           <h3 className="text-[14px] font-light">Address</h3>
-                          <Input placeholder="Basic usage" />
+                          <Input placeholder="Basic usage" id="address" value={data.address} onChange={(e) =>handle(e)} />
                         </div>
 
                         <div className="flex gap-[20px] items-center">
@@ -239,24 +304,8 @@ const items = [
                       {/* 2nd Container with rent, deposit, saure footage */}
                     <div className="flex gap-[30px] items-center">
                       <div>
-                        <h3 className="text-[14px] font-light">Rents</h3>
-                              <Select  placeholder='Select' style={{width:300,}}onChange={handleChange}
-                              options={[
-                              {
-                                value: '50k-70k',
-                                label: '50k-70k',
-                              },
-                              {
-                                value: '70k-120k',
-                                label: '70k-120k',
-                              },
-                              {
-                                value: '120k above',
-                                label: '120k above',
-                               },
-                            
-                              ]}
-                              />
+                          <h3 className=" flex items-center gap-[5px] text-[14px] font-light">Rents <p className="text-[13px] text-red-600">Numbers only</p></h3>
+                          <Input placeholder="Basic usage" style={{width:300}} id="rent" value={data.rent} onChange={(e) =>handle(e)}/>
                       </div>
                       <div>
                       <h3 className="text-[14px] font-light">Deposits</h3>
@@ -303,7 +352,7 @@ const items = [
                       {/* 3rd Container */}
                     <div>
                       <h3 className="text-[14px] font-light py-[5px]">Description</h3>
-                      <TextArea rows={4} placeholder="Describe your property. Explain what makes it such a great place to live!" maxLength={6} />
+                      <TextArea rows={4} onChange={(e) =>handle(e)} id="description" value={data.description} placeholder="Describe your property. Explain what makes it such a great place to live!" maxLength={500} />
                     </div>
 
                       {/* 4th container in the first major cont */}
@@ -332,9 +381,13 @@ const items = [
                               ]}
                               />
                       </div>
-
-                      
+                                     
                     </div>
+                    <div className=" flex items-center w-[100px] h-[40px] py-[50px] px-[10px]">
+                            <Button onClick={Submit} type="primary" style={{background:'#376FFF'}} block>
+                              Submit
+                          </Button>
+                        </div>    
                   </div>
 
 
